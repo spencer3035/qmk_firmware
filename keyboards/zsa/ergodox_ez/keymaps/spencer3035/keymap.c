@@ -17,8 +17,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLS,
     KC_LEFT_GUI,    MT(MOD_LALT, KC_A),KC_S,           KC_D,           LT(2,KC_F),     LT(5,KC_G),                                                                     KC_H,           KC_J,           KC_K,           KC_L,           MT(MOD_RALT, KC_SCLN),MT(MOD_LGUI, KC_QUOTE),
     KC_LEFT_SHIFT,  MT(MOD_LCTL, KC_Z),KC_X,           KC_C,           KC_V,           KC_B,           KC_TRANSPARENT,                                 TO(1),          LT(3,KC_N),     KC_M,           KC_COMMA,       KC_DOT,         MT(MOD_RCTL, KC_SLASH),KC_RIGHT_SHIFT,
-    KC_TRANSPARENT, KC_TRANSPARENT, CW_TOGG,        KC_TRANSPARENT, KC_ESCAPE,                                                                                                      KC_TAB,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, CW_TOGG,        QK_REP, KC_ESCAPE,                                                                                                      KC_TAB,         QK_AREP, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+                                                                                                    KC_TILD,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_SPACE,       KC_BSPC,        MO(4),          KC_MINUS,       KC_ESCAPE,      KC_ENTER
   ),
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+                                                                                    KC_QUES,        KC_EXLM,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [4] = LAYOUT_ergodox_pretty(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
@@ -77,31 +77,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 
+// Macros
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case ST_MACRO_0:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_MINUS) SS_DELAY(100) SS_TAP(X_MINUS));
+      SEND_STRING(SS_TAP(X_MINUS) SS_DELAY(10) SS_TAP(X_MINUS));
     }
     break;
     case ST_MACRO_1:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_LBRC) SS_DELAY(100) SS_TAP(X_RBRC) SS_DELAY(100) SS_TAP(X_LEFT));
+      SEND_STRING(SS_TAP(X_LBRC) SS_DELAY(10) SS_TAP(X_RBRC) SS_DELAY(10) SS_TAP(X_LEFT));
     }
     break;
     case ST_MACRO_2:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_DOT) SS_DELAY(100) SS_TAP(X_DOT) SS_DELAY(100) SS_TAP(X_SLASH));
+      SEND_STRING(SS_TAP(X_DOT) SS_DELAY(10) SS_TAP(X_DOT) SS_DELAY(10) SS_TAP(X_SLASH));
     }
     break;
     case ST_MACRO_3:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_9)) SS_DELAY(100) SS_LSFT(SS_TAP(X_0)) SS_DELAY(100) SS_TAP(X_LEFT));
+      SEND_STRING(SS_LSFT(SS_TAP(X_9)) SS_DELAY(10) SS_LSFT(SS_TAP(X_0)) SS_DELAY(10) SS_TAP(X_LEFT));
     }
     break;
     case ST_MACRO_4:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_LBRC)) SS_DELAY(100) SS_LSFT(SS_TAP(X_RBRC)) SS_DELAY(100) SS_TAP(X_LEFT));
+      SEND_STRING(SS_LSFT(SS_TAP(X_LBRC)) SS_DELAY(10) SS_LSFT(SS_TAP(X_RBRC)) SS_DELAY(10) SS_TAP(X_LEFT));
     }
     break;
 
@@ -109,6 +110,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
+// Set layers
 uint8_t layer_state_set_user(uint8_t state) {
     uint8_t layer = biton(state);
   ergodox_board_led_off();
@@ -148,5 +150,12 @@ uint8_t layer_state_set_user(uint8_t state) {
   return state;
 };
 
-
-
+// Alternate keycodes
+uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
+    switch (keycode) {
+        case KC_C:
+            return KC_D;
+        default:
+            return KC_TRANSPARENT;
+    }
+}
