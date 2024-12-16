@@ -4,6 +4,6 @@
 */
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "v9axa/JMg6m"
+#define SERIAL_NUMBER "v9axa/baOWj"
 #define LAYER_STATE_8BIT
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
