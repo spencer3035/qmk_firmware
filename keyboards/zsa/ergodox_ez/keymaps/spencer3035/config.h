@@ -4,7 +4,7 @@
 */
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "v9axa/6d97B"
+#define SERIAL_NUMBER "v9axa/nQpqD"
 #define LAYER_STATE_8BIT
 //#define HOLD_ON_OTHER_KEY_PRESS
 #define PERMISSIVE_HOLD
