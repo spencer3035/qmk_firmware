@@ -351,8 +351,13 @@ tap_dance_action_t tap_dance_actions[] = {
 // Alternate keycodes
 uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
     switch (keycode) {
+        // To make typing cd easier.
         case KC_C:
             return KC_D;
+        // Same behavior as typing normal repeat key for quick backspacing needs.
+        // TODO: This doesn't seem to work
+        case KC_BSPC:
+            return KC_BSPC;
         default:
             return KC_TRANSPARENT;
     }
