@@ -4,10 +4,10 @@
 */
 
 #undef TAPPING_TERM
-#define TAPPING_TERM 150
+#define TAPPING_TERM 170
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "v9axa/wZqq3"
+#define SERIAL_NUMBER "v9axa/dmK4N"
 #define LAYER_STATE_8BIT
 //#define HOLD_ON_OTHER_KEY_PRESS
 #define PERMISSIVE_HOLD
