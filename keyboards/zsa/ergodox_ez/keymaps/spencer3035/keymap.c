@@ -26,9 +26,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LEFT_GUI,    MT(MOD_LALT, KC_A),KC_S,           KC_D,           LT(4,KC_F),     LT(5,KC_G),                                                                     KC_H,           KC_J,           KC_K,           KC_L,           MT(MOD_RALT, KC_SCLN),KC_QUOTE,
     KC_TRANSPARENT, MT(MOD_LCTL, KC_Z),KC_X,           KC_C,           KC_V,           KC_B,           CW_TOGG,                                        KC_TRANSPARENT, KC_N,           KC_M,           KC_COMMA,       KC_DOT,         MT(MOD_RCTL, KC_SLASH),KC_COLN,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, OSL(3),         OSL(2),                                                                                                         KC_MINUS,       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                    OSM(MOD_LGUI),  KC_TAB,         KC_TRANSPARENT, KC_ESCAPE,
-                                                                                                                    KC_TRANSPARENT, OSL(6),
-                                                                                    KC_SPACE,       OSM(MOD_LSFT),  QK_REP,          QK_AREP,          KC_BSPC,        MT(MOD_RGUI, KC_ENTER)
+                                                                                                    OSM(MOD_LGUI),  KC_TAB,         OSL(6),         KC_ESCAPE,
+                                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT,
+                                                                                    KC_SPACE,       OSM(MOD_LSFT),  QK_REP,          QK_AREP,          KC_BSPC,        KC_ENTER
   ),
   [1] = LAYOUT_ergodox_pretty(
     KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_TRANSPARENT,                                 TO(0),          KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_MINUS,       KC_7,           KC_8,           KC_9,           KC_GRAVE,       KC_TRANSPARENT,
     KC_TRANSPARENT, KC_LEFT_ALT,    KC_TRANSPARENT, KC_SPACE,       OSM(MOD_LGUI),  KC_TRANSPARENT,                                                                 KC_LBRC,        KC_4,           KC_5,           KC_6,           KC_RBRC,        KC_DQUO,
     KC_TRANSPARENT, KC_LEFT_CTRL,   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_EQUAL,       KC_1,           KC_2,           KC_3,           KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_DOT,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TO(0),                                                                                                          KC_DOT,         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_0
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_UNDS,        KC_AMPR,        KC_ASTR,        KC_LPRN,        KC_TILD,        KC_PIPE,
     KC_TRANSPARENT, KC_LEFT_ALT,    KC_TRANSPARENT, KC_SPACE,       OSM(MOD_RGUI),  KC_TRANSPARENT,                                                                 KC_LCBR,        KC_DLR,         KC_PERC,        KC_CIRC,        KC_RCBR,        KC_DQUO,
     KC_TRANSPARENT, KC_LEFT_CTRL,   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_PLUS,        KC_EXLM,        KC_AT,          KC_HASH,        KC_TRANSPARENT, KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TO(0),          KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_RPRN
@@ -215,9 +215,6 @@ uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
             return KC_A;
         case KC_E:
             return KC_D;
-        case KC_MINUS:
-            // Special case repeat for minus for less hand strech
-            return KC_MINUS;
         default:
             return KC_TRANSPARENT;
     }
