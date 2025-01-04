@@ -26,9 +26,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LEFT_GUI,    MT(MOD_LALT, KC_A),KC_S,           KC_D,           LT(4,KC_F),     LT(5,KC_G),                                                                     KC_H,           KC_J,           KC_K,           KC_L,           MT(MOD_RALT, KC_SCLN),KC_QUOTE,
     KC_TRANSPARENT, MT(MOD_LCTL, KC_Z),KC_X,           KC_C,           KC_V,           KC_B,           CW_TOGG,                                        KC_TRANSPARENT, KC_N,           KC_M,           KC_COMMA,       KC_DOT,         MT(MOD_RCTL, KC_SLASH),KC_COLN,
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, OSL(3),         OSL(2),                                                                                                         KC_MINUS,       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
-                                                                                                    OSM(MOD_LGUI),  KC_TRANSPARENT, OSL(6),         KC_TRANSPARENT,
-                                                                                                                    QK_REP,          QK_AREP,
-                                                                                    KC_SPACE,       OSM(MOD_LSFT),  KC_ESCAPE,      KC_TAB,         KC_BSPC,        MT(MOD_RGUI, KC_ENTER)
+                                                                                                    OSM(MOD_LGUI),  KC_TAB,         KC_TRANSPARENT, KC_ESCAPE,
+                                                                                                                    KC_TRANSPARENT, OSL(6),
+                                                                                    KC_SPACE,       OSM(MOD_LSFT),  QK_REP,          QK_AREP,          KC_BSPC,        MT(MOD_RGUI, KC_ENTER)
   ),
   [1] = LAYOUT_ergodox_pretty(
     KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_TRANSPARENT,                                 TO(0),          KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,
