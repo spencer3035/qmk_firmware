@@ -23,7 +23,7 @@ enum custom_keycodes {
 
 /* Setup:
  * 0) Setup registers, put in register q, modifies register q, w, and e. Use q to format one layer
- * 03j2w"wy$3j"ey$3j"qy$/\[[0-9]\]l
+ * 03j2w"wy$3j"ey$3j"qy$:40,$s/KC_LEFT_SHIFT/KC_LSFT/ge:40,$s/KC_RIGHT_SHIFT/KC_RSFT/ge:40,$s/QK_STENO_BOLT/BOLT/ge:40,$s/QK_STENO_GEMINI/GEMIN/ge:40,$s/KC_LEFT_GUI/KC_LGUI/ge:40,$s/KC_LEFT_CTRL/KC_LCTL/ge:40,$s/KC_LEFT_ALT/KC_LALT/ge:40,$s/KC_RIGHT_GUI/KC_RGUI/ge:40,$s/KC_RIGHT_CTRL/KC_RCTL/ge:40,$s/KC_RIGHT_ALT/KC_RALT/ge:40,$s/KC_TRANSPARENT/____/ge:40,$s/100/10/ge/\[[0-9]\]l
  *
  * 1) Reorganize columns appropriately:
  * j0EEEEEEEaj0EEEEEEEaj0EEEEEEajEEEEEEEaj0EEEEEaj0EEaj0Eaj0EEEa14kddpdjpd2jpd3jpd4jpd5jpd6jp9k
@@ -163,22 +163,22 @@ ____,  /*_*/         /*_*/   /*_*/        /*_*/        /*_*/         /*_*/
 ____,  ____,         ____    /*_*/        /*_*/        /*_*/         /*_*/
   ),
   [7] = LAYOUT_ergodox(
-____,   ____,     ____,      ____,      ____,    ____,     BOLT,
-____,   STN_S1,   STN_TL,    STN_PL,    STN_HL,  STN_ST1,  ____,
-____,   STN_S2,   STN_KL,    STN_WL,    STN_RL,  STN_ST2,  /*_*/
-____,   STN_N1,   STN_N2,    STN_N3,    STN_N4,  STN_N5,   ____,
-____,   ____,     ____,      ____,      STN_NC,  /*_*/     /*_*/
-/*_*/   /*_*/     /*_*/      /*_*/      /*_*/    STN_NC,   ____,
-/*_*/   /*_*/     /*_*/      /*_*/      /*_*/    /*_*/     ____,
-/*_*/   /*_*/     /*_*/      /*_*/      STN_A,   STN_O,    ____,
-GEMIN,  STN_FN,   STN_RES1,  STN_RES2,  ____,    ____,     STN_PWR,
-TO(0),  STN_ST3,  STN_FR,    STN_PR,    STN_LR,  STN_TR,   STN_DR,
-/*_*/   STN_ST4,  STN_RR,    STN_BR,    STN_GR,  STN_SR,   STN_ZR,
-____,   STN_N6,   STN_N7,    STN_N8,    STN_N9,  STN_NA,   STN_NB,
-/*_*/   /*_*/     STN_NC,    ____,      ____,    ____,     ____,
-____,   STN_NC,   /*_*/      /*_*/      /*_*/    /*_*/     /*_*/
-____,   /*_*/     /*_*/      /*_*/      /*_*/    /*_*/     /*_*/
-____,   STN_E,    STN_U      /*_*/      /*_*/    /*_*/     /*_*/
+____,          STN_N1,   STN_N2,  STN_N3,  STN_N4,  STN_N5,   BOLT,
+____,          STN_S1,   STN_TL,  STN_PL,  STN_HL,  STN_ST1,  ____,
+____,          STN_S2,   STN_KL,  STN_WL,  STN_RL,  STN_ST2,  /*_*/
+____,          KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,
+____,          ____,     ____,    ____,    STN_NC,  /*_*/     /*_*/
+/*_*/          /*_*/     /*_*/    /*_*/    /*_*/    STN_NC,   STN_RES1,
+/*_*/          /*_*/     /*_*/    /*_*/    /*_*/    /*_*/     STN_RES2,
+/*_*/          /*_*/     /*_*/    /*_*/    STN_A,   STN_O,    ____,
+GEMIN,STN_N6,  STN_N7,   STN_N8,  STN_N9,  STN_NA,  STN_NB,
+TO(0),         STN_ST3,  STN_FR,  STN_PR,  STN_LR,  STN_TR,   STN_DR,
+/*_*/          STN_ST4,  STN_RR,  STN_BR,  STN_GR,  STN_SR,   STN_ZR,
+____,          KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,
+/*_*/          /*_*/     STN_NC,  ____,    ____,    ____,     ____,
+STN_FN,        STN_NC,   /*_*/    /*_*/    /*_*/    /*_*/     /*_*/
+STN_PWR,       /*_*/     /*_*/    /*_*/    /*_*/    /*_*/     /*_*/
+____,          STN_E,    STN_U    /*_*/    /*_*/    /*_*/     /*_*/
   ),
 };
 
