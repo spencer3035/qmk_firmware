@@ -42,15 +42,15 @@ ____,     KC_Q,               KC_W,      KC_E,      KC_R,        KC_T,          
 KC_LGUI,  MT(MOD_LALT,KC_A),  KC_S,      KC_D,      LT(4,KC_F),  LT(5,KC_G),             /*_*/
 ____,     MT(MOD_LCTL,KC_Z),  KC_X,      KC_C,      KC_V,        KC_B,                   CW_TOGG,
 ____,     ____,               ____,      OSL(3),    OSL(2),      /*_*/                   /*_*/
-/*_*/     /*_*/               /*_*/      /*_*/      /*_*/        OSM(MOD_LGUI),          ____,
-/*_*/     /*_*/               /*_*/      /*_*/      /*_*/        /*_*/                   ____,
+/*_*/     /*_*/               /*_*/      /*_*/      /*_*/        OSM(MOD_LGUI),          DM_PLY1,
+/*_*/     /*_*/               /*_*/      /*_*/      /*_*/        /*_*/                   DM_RSTP,
 /*_*/     /*_*/               /*_*/      /*_*/      KC_SPACE,    OSM(MOD_LSFT),          QK_REP,
 TO(1),    ____,               ____,      ____,      ____,        ____,                   ____,
 TO(7),    KC_Y,               KC_U,      KC_I,      KC_O,        KC_P,                   KC_BSLS,
 /*_*/     KC_H,               KC_J,      KC_K,      KC_L,        MT(MOD_RALT,KC_SCLN),   KC_QUOTE,
 ____,     KC_N,               KC_M,      KC_COMMA,  KC_DOT,      MT(MOD_RCTL,KC_SLASH),  KC_COLN,
 /*_*/     /*_*/               KC_MINUS,  KC_LEFT,   KC_DOWN,     KC_UP,                  KC_RIGHT,
-____,     OSL(6),             /*_*/      /*_*/      /*_*/        /*_*/                   /*_*/
+DM_PLY2,  OSL(6),             /*_*/      /*_*/      /*_*/        /*_*/                   /*_*/
 KC_TAB,   /*_*/               /*_*/      /*_*/      /*_*/        /*_*/                   /*_*/
 QK_AREP,  KC_BSPC,            KC_ENTER   /*_*/      /*_*/        /*_*/                   /*_*/
   ),
@@ -145,40 +145,40 @@ ____,  /*_*/     /*_*/   /*_*/   /*_*/   /*_*/     /*_*/
 ____,  ____,     ____    /*_*/   /*_*/   /*_*/     /*_*/
   ),
   [6] = LAYOUT_ergodox(
-____,  ____,         ____,   ____,        ____,        ____,         ____,
-____,  ST_MACRO_0,   KC_NO,  ST_MACRO_1,  KC_NO,       KC_NO,        ____,
-____,  ST_MACRO_2,   KC_NO,  ST_MACRO_3,  KC_NO,       KC_NO,        /*_*/
-____,  KC_NO,        KC_NO,  ST_MACRO_4,  KC_NO,       ST_MACRO_5,   ____,
-____,  ____,         ____,   ____,        ____,        /*_*/         /*_*/
-/*_*/  /*_*/         /*_*/   /*_*/        /*_*/        ____,         ____,
-/*_*/  /*_*/         /*_*/   /*_*/        /*_*/        /*_*/         ____,
-/*_*/  /*_*/         /*_*/   /*_*/        ____,        ____,         ____,
-____,  ____,         ____,   ____,        ____,        ____,         ____,
-____,  ST_MACRO_6,   KC_NO,  ST_MACRO_7,  ST_MACRO_8,  KC_NO,        ____,
-/*_*/  ST_MACRO_9,   KC_NO,  KC_NO,       KC_NO,       ST_MACRO_10,  ____,
-____,  ST_MACRO_11,  KC_NO,  KC_NO,       KC_NO,       ST_MACRO_12,  ____,
-/*_*/  /*_*/         ____,   ____,        ____,        ____,         ____,
-____,  ____,         /*_*/   /*_*/        /*_*/        /*_*/         /*_*/
-____,  /*_*/         /*_*/   /*_*/        /*_*/        /*_*/         /*_*/
-____,  ____,         ____    /*_*/        /*_*/        /*_*/         /*_*/
+____,  DM_REC1,      DM_REC2,  ____,        ____,        ____,         ____,
+____,  ST_MACRO_0,   KC_NO,    ST_MACRO_1,  KC_NO,       KC_NO,        ____,
+____,  ST_MACRO_2,   KC_NO,    ST_MACRO_3,  KC_NO,       KC_NO,        /*_*/
+____,  KC_NO,        KC_NO,    ST_MACRO_4,  KC_NO,       ST_MACRO_5,   ____,
+____,  ____,         ____,     ____,        ____,        /*_*/         /*_*/
+/*_*/  /*_*/         /*_*/     /*_*/        /*_*/        ____,         ____,
+/*_*/  /*_*/         /*_*/     /*_*/        /*_*/        /*_*/         ____,
+/*_*/  /*_*/         /*_*/     /*_*/        ____,        ____,         ____,
+____,  ____,         ____,     ____,        ____,        ____,         ____,
+____,  ST_MACRO_6,   KC_NO,    ST_MACRO_7,  ST_MACRO_8,  KC_NO,        ____,
+/*_*/  ST_MACRO_9,   KC_NO,    KC_NO,       KC_NO,       ST_MACRO_10,  ____,
+____,  ST_MACRO_11,  KC_NO,    KC_NO,       KC_NO,       ST_MACRO_12,  ____,
+/*_*/  /*_*/         ____,     ____,        ____,        ____,         ____,
+____,  ____,         /*_*/     /*_*/        /*_*/        /*_*/         /*_*/
+____,  /*_*/         /*_*/     /*_*/        /*_*/        /*_*/         /*_*/
+____,  ____,         ____      /*_*/        /*_*/        /*_*/         /*_*/
   ),
   [7] = LAYOUT_ergodox(
-____,          ____,     STN_N2,  STN_N3,  STN_N4,  STN_N5,   BOLT,
-____,          STN_N1,   STN_TL,  STN_PL,  STN_HL,  STN_ST1,  ____,
-____,          STN_S1,   STN_KL,  STN_WL,  STN_RL,  STN_ST2,  /*_*/
-____,          STN_S2,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,
-____,          ____,     ____,    ____,    STN_NC,  /*_*/     /*_*/
-/*_*/          /*_*/     /*_*/    /*_*/    /*_*/    STN_NC,   STN_RES1,
-/*_*/          /*_*/     /*_*/    /*_*/    /*_*/    /*_*/     STN_RES2,
-/*_*/          /*_*/     /*_*/    /*_*/    STN_A,   STN_O,    ____,
-GEMIN,STN_N6,  STN_N7,   STN_N8,  STN_N9,  STN_NA,  ____,
-TO(0),         STN_ST3,  STN_FR,  STN_PR,  STN_LR,  STN_NB,   ____,
-/*_*/          STN_ST4,  STN_RR,  STN_BR,  STN_GR,  STN_TR,   STN_DR,
-____,          KC_NO,    KC_NO,   KC_NO,   KC_NO,   STN_SR,   STN_ZR,
-/*_*/          /*_*/     STN_NC,  ____,    ____,    ____,     ____,
-STN_FN,        STN_NC,   /*_*/    /*_*/    /*_*/    /*_*/     /*_*/
-STN_PWR,       /*_*/     /*_*/    /*_*/    /*_*/    /*_*/     /*_*/
-____,          STN_E,    STN_U    /*_*/    /*_*/    /*_*/     /*_*/
+____,     KC_NO,    STN_N2,  STN_N3,  STN_N4,  STN_N5,   BOLT,
+____,     STN_N1,   STN_TL,  STN_PL,  STN_HL,  STN_ST1,  ____,
+____,     STN_S1,   STN_KL,  STN_WL,  STN_RL,  STN_ST2,  /*_*/
+____,     STN_S2,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,
+____,     ____,     ____,    ____,    STN_NC,  /*_*/     /*_*/
+/*_*/     /*_*/     /*_*/    /*_*/    /*_*/    STN_NC,   STN_RES1,
+/*_*/     /*_*/     /*_*/    /*_*/    /*_*/    /*_*/     STN_RES2,
+/*_*/     /*_*/     /*_*/    /*_*/    STN_A,   STN_O,    ____,
+GEMIN,    STN_N6,   STN_N7,  STN_N8,  STN_N9,  KC_NO,    KC_NO,
+TO(0),    STN_ST3,  STN_FR,  STN_PR,  STN_LR,  STN_NA,   STN_NB,
+/*_*/     STN_ST4,  STN_RR,  STN_BR,  STN_GR,  STN_TR,   STN_DR,
+____,     KC_NO,    KC_NO,   KC_NO,   KC_NO,   STN_SR,   STN_ZR,
+/*_*/     /*_*/     STN_NC,  ____,    ____,    ____,     ____,
+STN_FN,   STN_NC,   /*_*/    /*_*/    /*_*/    /*_*/     /*_*/
+STN_PWR,  /*_*/     /*_*/    /*_*/    /*_*/    /*_*/     /*_*/
+____,     STN_E,    STN_U    /*_*/    /*_*/    /*_*/     /*_*/
   ),
 };
 
