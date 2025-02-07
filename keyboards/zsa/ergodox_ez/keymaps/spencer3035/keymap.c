@@ -37,22 +37,22 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox(
-____,     ____,               ____,     ____,      ____,        ____,                   ____,
-____,     KC_Q,               KC_W,     KC_E,      KC_R,        KC_T,                   KC_ESCAPE,
-KC_LGUI,  MT(MOD_LALT,KC_A),  KC_S,     KC_D,      LT(3,KC_F),  LT(4,KC_G),             /*_*/
-____,     MT(MOD_LCTL,KC_Z),  KC_X,     KC_C,      KC_V,        KC_B,                   CW_TOGG,
-____,     ____,               ____,     ____,      KC_MINUS,    /*_*/                   /*_*/
-/*_*/     /*_*/               /*_*/     /*_*/      /*_*/        OSM(MOD_LGUI),          DM_PLY1,
-/*_*/     /*_*/               /*_*/     /*_*/      /*_*/        /*_*/                   DM_RSTP,
-/*_*/     /*_*/               /*_*/     /*_*/      KC_SPACE,    OSM(MOD_LSFT),          QK_AREP,
-TO(1),    ____,               ____,     ____,      ____,        ____,                   ____,
-TO(6),    KC_Y,               KC_U,     KC_I,      KC_O,        KC_P,                   KC_BSLS,
-/*_*/     KC_H,               KC_J,     KC_K,      KC_L,        MT(MOD_RALT,KC_SCLN),   KC_QUOTE,
-____,     KC_N,               KC_M,     KC_COMMA,  KC_DOT,      MT(MOD_RCTL,KC_SLASH),  KC_COLN,
-/*_*/     /*_*/               OSL(2),   KC_LEFT,   KC_DOWN,     KC_UP,                  KC_RIGHT,
-DM_PLY2,  KC_TAB,             /*_*/     /*_*/      /*_*/        /*_*/                   /*_*/
-OSL(5),   /*_*/               /*_*/     /*_*/      /*_*/        /*_*/                   /*_*/
-QK_REP,   KC_BSPC,            KC_ENTER  /*_*/      /*_*/        /*_*/                   /*_*/
+____,      ____,               ____,     ____,      ____,        ____,                   ____,
+____,      KC_Q,               KC_W,     KC_E,      KC_R,        KC_T,                   KC_ESCAPE,
+KC_LGUI,   MT(MOD_LALT,KC_A),  KC_S,     KC_D,      LT(3,KC_F),  LT(4,KC_G),             /*_*/
+____,      MT(MOD_LCTL,KC_Z),  KC_X,     KC_C,      KC_V,        KC_B,                   CW_TOGG,
+____,      ____,               ____,     ____,      ____,        /*_*/                   /*_*/
+/*_*/      /*_*/               /*_*/     /*_*/      /*_*/        OSM(MOD_LGUI),          DM_PLY1,
+/*_*/      /*_*/               /*_*/     /*_*/      /*_*/        /*_*/                   DM_RSTP,
+/*_*/      /*_*/               /*_*/     /*_*/      KC_SPACE,    OSM(MOD_LSFT),          QK_AREP,
+TO(1),     ____,               ____,     ____,      ____,        ____,                   ____,
+TO(6),     KC_Y,               KC_U,     KC_I,      KC_O,        KC_P,                   KC_BSLS,
+/*_*/      KC_H,               KC_J,     KC_K,      KC_L,        MT(MOD_RALT,KC_SCLN),   KC_QUOTE,
+KC_MINUS,  KC_N,               KC_M,     KC_COMMA,  KC_DOT,      MT(MOD_RCTL,KC_SLASH),  KC_COLN,
+/*_*/      /*_*/               OSL(2),   KC_LEFT,   KC_DOWN,     KC_UP,                  KC_RIGHT,
+DM_PLY2,   KC_TAB,             /*_*/     /*_*/      /*_*/        /*_*/                   /*_*/
+OSL(5),    /*_*/               /*_*/     /*_*/      /*_*/        /*_*/                   /*_*/
+QK_REP,    KC_BSPC,            KC_ENTER  /*_*/      /*_*/        /*_*/                   /*_*/
   ),
   [1] = LAYOUT_ergodox(
 KC_GRAVE,  KC_1,  KC_2,     KC_3,  KC_4,       KC_5,      ____,
@@ -73,22 +73,22 @@ ____,      /*_*/  /*_*/     /*_*/  /*_*/       /*_*/      /*_*/
 ____,      ____,  KC_ENTER  /*_*/  /*_*/       /*_*/      /*_*/
   ),
   [2] = LAYOUT_ergodox(
-____,  ____,     ____,      ____,      ____,     ____,     ____,
-____,  KC_NO,    KC_GRAVE,  KC_EQUAL,  KC_LBRC,  KC_LCBR,  ____,
-____,  KC_1,     KC_2,      KC_3,      KC_4,     KC_5,     /*_*/
-____,  KC_EXLM,  KC_AT,     KC_HASH,   KC_DLR,   KC_PERC,  ____,
-____,  ____,     ____,      ____,      ____,     /*_*/     /*_*/
-/*_*/  /*_*/     /*_*/      /*_*/      /*_*/     ____,     ____,
-/*_*/  /*_*/     /*_*/      /*_*/      /*_*/     /*_*/     ____,
-/*_*/  /*_*/     /*_*/      /*_*/      ____,     KC_BSPC,  ____,
-____,  ____,     ____,      ____,      ____,     ____,     ____,
-____,  KC_RCBR,  KC_RBRC,   KC_PLUS,   KC_TILD,  KC_NO,    ____,
-/*_*/  KC_6,     KC_7,      KC_8,      KC_9,     KC_0,     KC_DQUO,
-____,  KC_CIRC,  KC_AMPR,   KC_ASTR,   KC_LPRN,  KC_RPRN,  KC_PIPE,
-/*_*/  /*_*/     TO(0),     ____,      ____,     ____,     ____,
-____,  ____,     /*_*/      /*_*/      /*_*/     /*_*/     /*_*/
-____,  /*_*/     /*_*/      /*_*/      /*_*/     /*_*/     /*_*/
-____,  ____,     ____       /*_*/      /*_*/     /*_*/     /*_*/
+____,  ____,     ____,     ____,     ____,      ____,      ____,
+____,  KC_TILD,  KC_PLUS,  KC_LPRN,  KC_LBRC,   KC_LCBR,   ____,
+____,  KC_1,     KC_2,     KC_3,     KC_4,      KC_5,      /*_*/
+____,  KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,    KC_PERC,   ____,
+____,  ____,     ____,     ____,     ____,      /*_*/      /*_*/
+/*_*/  /*_*/     /*_*/     /*_*/     /*_*/      ____,      ____,
+/*_*/  /*_*/     /*_*/     /*_*/     /*_*/      /*_*/      ____,
+/*_*/  /*_*/     /*_*/     /*_*/     ____,      KC_BSPC,   ____,
+____,  ____,     ____,     ____,     ____,      ____,      ____,
+____,  KC_RCBR,  KC_RBRC,  KC_RPRN,  KC_EQUAL,  KC_GRAVE,  ____,
+/*_*/  KC_6,     KC_7,     KC_8,     KC_9,      KC_0,      KC_DQUO,
+____,  KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_NO,     KC_NO,     KC_PIPE,
+/*_*/  /*_*/     TO(0),    ____,     ____,      ____,      ____,
+____,  ____,     /*_*/     /*_*/     /*_*/      /*_*/      /*_*/
+____,  /*_*/     /*_*/     /*_*/     /*_*/      /*_*/      /*_*/
+____,  ____,     ____      /*_*/     /*_*/      /*_*/      /*_*/
   ),
   [3] = LAYOUT_ergodox(
 ____,  ____,     ____,          ____,        ____,      ____,     ____,
@@ -111,7 +111,7 @@ ____,  ____,     OSM(MOD_RGUI)  /*_*/        /*_*/      /*_*/     /*_*/
   [4] = LAYOUT_ergodox(
 ____,  ____,     ____,   ____,   ____,   ____,     ____,
 ____,  ____,     ____,   ____,   ____,   ____,     ____,
-____,  KC_LALT,  ____,   KC_D,   KC_F,   ____,     /*_*/
+____,  KC_LALT,  ____,   ____,   KC_F,   ____,     /*_*/
 ____,  KC_LCTL,  ____,   ____,   ____,   ____,     ____,
 ____,  ____,     ____,   ____,   ____,   /*_*/     /*_*/
 /*_*/  /*_*/     /*_*/   /*_*/   /*_*/   ____,     ____,
