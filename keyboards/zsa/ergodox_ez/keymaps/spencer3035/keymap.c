@@ -44,7 +44,7 @@ ____,      MT(MOD_LCTL,KC_Z),  KC_X,     KC_C,      KC_V,        KC_B,          
 ____,      ____,               ____,     ____,      ____,        /*_*/                   /*_*/
 /*_*/      /*_*/               /*_*/     /*_*/      /*_*/        OSM(MOD_LGUI),          DM_PLY1,
 /*_*/      /*_*/               /*_*/     /*_*/      /*_*/        /*_*/                   DM_RSTP,
-/*_*/      /*_*/               /*_*/     /*_*/      KC_SPACE,    OSM(MOD_LSFT),          QK_AREP,
+/*_*/      /*_*/               /*_*/     /*_*/      KC_SPACE,    OSM(MOD_LSFT),          QK_REP,
 TO(1),     ____,               ____,     ____,      ____,        ____,                   ____,
 TO(6),     KC_Y,               KC_U,     KC_I,      KC_O,        KC_P,                   KC_BSLS,
 /*_*/      KC_H,               KC_J,     KC_K,      KC_L,        MT(MOD_RALT,KC_SCLN),   KC_QUOTE,
@@ -52,7 +52,7 @@ KC_MINUS,  KC_N,               KC_M,     KC_COMMA,  KC_DOT,      MT(MOD_RCTL,KC_
 /*_*/      /*_*/               OSL(2),   KC_LEFT,   KC_DOWN,     KC_UP,                  KC_RIGHT,
 DM_PLY2,   KC_TAB,             /*_*/     /*_*/      /*_*/        /*_*/                   /*_*/
 OSL(5),    /*_*/               /*_*/     /*_*/      /*_*/        /*_*/                   /*_*/
-QK_REP,    KC_BSPC,            KC_ENTER  /*_*/      /*_*/        /*_*/                   /*_*/
+QK_AREP,    KC_BSPC,            KC_ENTER  /*_*/      /*_*/        /*_*/                   /*_*/
   ),
   [1] = LAYOUT_ergodox(
 KC_GRAVE,  KC_1,  KC_2,     KC_3,  KC_4,       KC_5,      ____,
