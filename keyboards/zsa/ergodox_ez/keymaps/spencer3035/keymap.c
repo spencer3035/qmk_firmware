@@ -15,6 +15,8 @@ enum custom_keycodes {
     CLOPEN_SQ,
     CLOPEN_PAREN,
     CLOPEN_CURLY,
+    CLOPEN_SQUO,
+    CLOPEN_DQUO,
 };
 
 enum layers {
@@ -133,22 +135,22 @@ ____,  /*_*/           /*_*/   /*_*/   /*_*/   /*_*/  /*_*/
 ____,  ____,           ____    /*_*/   /*_*/   /*_*/  /*_*/
   ),
   [MACROS_LAYER] = LAYOUT_ergodox(
-____,   DM_REC1,       DM_REC2,  XXXX,       XXXX,          XXXX,         ____,
-____,   XXXX,          XXXX,     FAT_ARROW,  XXXX,          XXXX,         ____,
-____,   THIN_ARROW,    XXXX,     UP_DIR,     PAREN_END,     Q_PAREN_END,  /*_*/
-____,   XXXX,          XXXX,     XXXX,       XXXX,          CLOPEN_SQ,    ____,
-____,   ____,          ____,     ____,       ____,          /*_*/         /*_*/
-/*_*/   /*_*/          /*_*/     /*_*/       /*_*/          ____,         ____,
-/*_*/   /*_*/          /*_*/     /*_*/       /*_*/          /*_*/         ____,
-/*_*/   /*_*/          /*_*/     /*_*/       ____,          ____,         ____,
-____,   XXXX,          XXXX,     XXXX,       XXXX,          XXXX,         ____,
-____,   XXXX,          XXXX,     XXXX,       CLOPEN_PAREN,  XXXX,         ____,
-/*_*/   CLOPEN_CURLY,  XXXX,     XXXX,       XXXX,          XXXX,         ____,
-____,   XXXX,          XXXX,     XXXX,       XXXX,          XXXX,         ____,
-/*_*/   /*_*/          ____,     ____,       ____,          ____,         ____,
-____,   ____,          /*_*/     /*_*/       /*_*/          /*_*/         /*_*/
-TO(0),  /*_*/          /*_*/     /*_*/       /*_*/          /*_*/         /*_*/
-____,   ____,          ____      /*_*/       /*_*/          /*_*/         /*_*/
+____,   DM_REC1,     DM_REC2,       XXXX,         XXXX,         XXXX,         ____,
+____,   XXXX,        XXXX,          FAT_ARROW,    XXXX,         XXXX,         ____,
+____,   THIN_ARROW,  XXXX,          UP_DIR,       PAREN_END,    Q_PAREN_END,  /*_*/
+____,   XXXX,        XXXX,          XXXX,         XXXX,         XXXX,         ____,
+____,   ____,        ____,          ____,         ____,         /*_*/         /*_*/
+/*_*/   /*_*/        /*_*/          /*_*/         /*_*/         ____,         ____,
+/*_*/   /*_*/        /*_*/          /*_*/         /*_*/         /*_*/         ____,
+/*_*/   /*_*/        /*_*/          /*_*/         ____,         ____,         ____,
+____,   XXXX,        XXXX,          XXXX,         XXXX,         XXXX,         ____,
+____,   XXXX,        CLOPEN_CURLY,  XXXX,         XXXX,         XXXX,         ____,
+/*_*/   XXXX,        CLOPEN_PAREN,  CLOPEN_DQUO,  CLOPEN_SQUO,  XXXX,         ____,
+____,   XXXX,        CLOPEN_SQ,     XXXX,         XXXX,         XXXX,         ____,
+/*_*/   /*_*/        ____,          ____,         ____,         ____,         ____,
+____,   ____,        /*_*/          /*_*/         /*_*/         /*_*/         /*_*/
+TO(0),  /*_*/        /*_*/          /*_*/         /*_*/         /*_*/         /*_*/
+____,   ____,        ____           /*_*/         /*_*/         /*_*/         /*_*/
   ),
   [STENOGRAPHY_LAYER] = LAYOUT_ergodox(
 ____,     XXXX,     STN_N2,  STN_N3,  STN_N4,  STN_N5,   BOLT,
@@ -210,7 +212,8 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     }
 }
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
+bool process_macro_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case FAT_ARROW:
             if (record->event.pressed) {
@@ -252,7 +255,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("{}" SS_TAP(X_LEFT));
             }
             break;
+        case CLOPEN_SQUO:
+            if (record->event.pressed) {
+                SEND_STRING("''" SS_TAP(X_LEFT));
+            }
+            break;
+        case CLOPEN_DQUO:
+            if (record->event.pressed) {
+                SEND_STRING("\"\"" SS_TAP(X_LEFT));
+            }
+            break;
     }
+
+    return true;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    process_macro_user(keycode, record);
     return true;
 }
 
