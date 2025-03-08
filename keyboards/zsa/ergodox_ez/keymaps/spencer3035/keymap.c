@@ -5,19 +5,18 @@
 #define BOLT QK_STENO_BOLT
 
 enum custom_keycodes {
-  RGB_SLD = EZ_SAFE_RANGE,
-  ST_MACRO_0,
-  ST_MACRO_1,
-  ST_MACRO_2,
-  ST_MACRO_3,
-  ST_MACRO_4,
-  ST_MACRO_5,
-  ST_MACRO_6,
-  ST_MACRO_7,
-  ST_MACRO_8,
-  ST_MACRO_9,
-  ST_MACRO_10,
-  ST_MACRO_11,
+    RGB_SLD = EZ_SAFE_RANGE,
+    VIM_QUIT,
+    FAT_ARROW,
+    THIN_ARROW,
+    UP_DIR,
+    PAREN_END,
+    Q_PAREN_END,
+    ST_MACRO_6,
+    SQUARE_KET,
+    CLOPEN_PAREN,
+    CLOPEN_CURLY,
+    DIV_EQ,
 };
 
 enum layers {
@@ -136,22 +135,22 @@ ____,  /*_*/           /*_*/   /*_*/   /*_*/   /*_*/  /*_*/
 ____,  ____,           ____    /*_*/   /*_*/   /*_*/  /*_*/
   ),
   [MACROS_LAYER] = LAYOUT_ergodox(
-____,   DM_REC1,     DM_REC2,  ____,        ____,        ____,         ____,
-____,   ST_MACRO_0,  KC_NO,    ST_MACRO_1,  KC_NO,       KC_NO,        ____,
-____,   ST_MACRO_2,  KC_NO,    ST_MACRO_3,  ST_MACRO_4,  ST_MACRO_5,   /*_*/
-____,   KC_NO,       KC_NO,    ST_MACRO_6,  KC_NO,       ST_MACRO_7,   ____,
-____,   ____,        ____,     ____,        ____,        /*_*/         /*_*/
-/*_*/   /*_*/        /*_*/     /*_*/        /*_*/        ____,         ____,
-/*_*/   /*_*/        /*_*/     /*_*/        /*_*/        /*_*/         ____,
-/*_*/   /*_*/        /*_*/     /*_*/        ____,        ____,         ____,
-____,   ____,        ____,     ____,        ____,        ____,         ____,
-____,   ____,        KC_NO,    ____,        ST_MACRO_8,  KC_NO,        ____,
-/*_*/   ST_MACRO_9,  KC_NO,    KC_NO,       KC_NO,       KC_NO,        ____,
-____,   ____,        KC_NO,    KC_NO,       KC_NO,       ST_MACRO_10,  ____,
-/*_*/   /*_*/        ____,     ____,        ____,        ____,         ____,
-____,   ____,        /*_*/     /*_*/        /*_*/        /*_*/         /*_*/
-TO(0),  /*_*/        /*_*/     /*_*/        /*_*/        /*_*/         /*_*/
-____,   ____,        ____      /*_*/        /*_*/        /*_*/         /*_*/
+____,   DM_REC1,       DM_REC2,  ____,        ____,          ____,         ____,
+____,   VIM_QUIT,      KC_NO,    FAT_ARROW,   KC_NO,         KC_NO,        ____,
+____,   THIN_ARROW,    KC_NO,    UP_DIR,      PAREN_END,     Q_PAREN_END,  /*_*/
+____,   KC_NO,         KC_NO,    ST_MACRO_6,  KC_NO,         SQUARE_KET,   ____,
+____,   ____,          ____,     ____,        ____,          /*_*/         /*_*/
+/*_*/   /*_*/          /*_*/     /*_*/        /*_*/          ____,         ____,
+/*_*/   /*_*/          /*_*/     /*_*/        /*_*/          /*_*/         ____,
+/*_*/   /*_*/          /*_*/     /*_*/        ____,          ____,         ____,
+____,   ____,          ____,     ____,        ____,          ____,         ____,
+____,   ____,          KC_NO,    ____,        CLOPEN_PAREN,  KC_NO,        ____,
+/*_*/   CLOPEN_CURLY,  KC_NO,    KC_NO,       KC_NO,         KC_NO,        ____,
+____,   ____,          KC_NO,    KC_NO,       KC_NO,         DIV_EQ,       ____,
+/*_*/   /*_*/          ____,     ____,        ____,          ____,         ____,
+____,   ____,          /*_*/     /*_*/        /*_*/          /*_*/         /*_*/
+TO(0),  /*_*/          /*_*/     /*_*/        /*_*/          /*_*/         /*_*/
+____,   ____,          ____      /*_*/        /*_*/          /*_*/         /*_*/
   ),
   [STENOGRAPHY_LAYER] = LAYOUT_ergodox(
 ____,     KC_NO,    STN_N2,  STN_N3,  STN_N4,  STN_N5,   BOLT,
@@ -190,134 +189,127 @@ combo_t key_combos[] = {
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
-  switch(combo_index) {
-    case TO_NAV:
-      if (pressed) {
-        set_oneshot_layer(NAVIGATION_LAYER, ONESHOT_START);
-      } else {
-        clear_oneshot_layer_state(ONESHOT_PRESSED);
-      }
-
-        break;
-    case TO_FN:
-      if (pressed) {
-        set_oneshot_layer(FUNCTION_LAYER, ONESHOT_START);
-      } else {
-        clear_oneshot_layer_state(ONESHOT_PRESSED);
-      }
-        break;
+    switch (combo_index) {
+        case TO_NAV:
+            if (pressed) {
+                set_oneshot_layer(NAVIGATION_LAYER, ONESHOT_START);
+            } else {
+                clear_oneshot_layer_state(ONESHOT_PRESSED);
+            }
+            break;
+        case TO_FN:
+            if (pressed) {
+                set_oneshot_layer(FUNCTION_LAYER, ONESHOT_START);
+            } else {
+                clear_oneshot_layer_state(ONESHOT_PRESSED);
+            }
+            break;
         case CHANGE_DIR:
-      if (pressed) {
-        SEND_STRING("cd ");
-      }
-        break;
-  }
+            if (pressed) {
+                SEND_STRING("cd ");
+            }
+            break;
+    }
 }
 
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case ST_MACRO_0:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_SCLN)) SS_DELAY(10) SS_TAP(X_Q) SS_DELAY(10) SS_LSFT(SS_TAP(X_1))  SS_DELAY(10) SS_TAP(X_ENTER));
+    switch (keycode) {
+        case VIM_QUIT:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LSFT(SS_TAP(X_SCLN)) SS_DELAY(10) SS_TAP(X_Q) SS_DELAY(10) SS_LSFT(SS_TAP(X_1)) SS_DELAY(10) SS_TAP(X_ENTER));
+            }
+            break;
+        case FAT_ARROW:
+            if (record->event.pressed) {
+                SEND_STRING(SS_TAP(X_EQUAL) SS_DELAY(10) SS_LSFT(SS_TAP(X_DOT)) SS_DELAY(10) SS_TAP(X_SPACE));
+            }
+            break;
+        case THIN_ARROW:
+            if (record->event.pressed) {
+                SEND_STRING(SS_TAP(X_MINUS) SS_DELAY(10) SS_LSFT(SS_TAP(X_DOT)) SS_DELAY(10) SS_TAP(X_SPACE));
+            }
+            break;
+        case UP_DIR:
+            if (record->event.pressed) {
+                SEND_STRING(SS_TAP(X_DOT) SS_DELAY(10) SS_TAP(X_DOT) SS_DELAY(10) SS_TAP(X_SLASH));
+            }
+            break;
+        case PAREN_END:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LSFT(SS_TAP(X_0)) SS_DELAY(10) SS_TAP(X_SCLN) SS_DELAY(10) SS_TAP(X_ENTER));
+            }
+            break;
+        case Q_PAREN_END:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LSFT(SS_TAP(X_QUOTE)) SS_DELAY(10) SS_LSFT(SS_TAP(X_0)) SS_DELAY(10) SS_TAP(X_SCLN) SS_DELAY(10) SS_TAP(X_ENTER));
+            }
+            break;
+        case ST_MACRO_6:
+            if (record->event.pressed) {
+                SEND_STRING(SS_TAP(X_C) SS_DELAY(10) SS_TAP(X_D) SS_DELAY(10) SS_TAP(X_SPACE) SS_DELAY(10) SS_LSFT(SS_TAP(X_GRAVE)) SS_DELAY(10) SS_TAP(X_SLASH));
+            }
+            break;
+        case SQUARE_KET:
+            if (record->event.pressed) {
+                SEND_STRING(SS_TAP(X_LBRC) SS_DELAY(10) SS_TAP(X_RBRC) SS_DELAY(10) SS_TAP(X_LEFT));
+            }
+            break;
+        case CLOPEN_PAREN:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LSFT(SS_TAP(X_9)) SS_DELAY(10) SS_LSFT(SS_TAP(X_0)) SS_DELAY(10) SS_TAP(X_LEFT));
+            }
+            break;
+        case CLOPEN_CURLY:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LSFT(SS_TAP(X_LBRC)) SS_DELAY(10) SS_LSFT(SS_TAP(X_RBRC)) SS_DELAY(10) SS_TAP(X_LEFT));
+            }
+            break;
+        case DIV_EQ:
+            if (record->event.pressed) {
+                SEND_STRING(SS_TAP(X_SLASH) SS_DELAY(10) SS_TAP(X_EQUAL) SS_DELAY(10) SS_TAP(X_SPACE));
+            }
+            break;
     }
-    break;
-    case ST_MACRO_1:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_EQUAL) SS_DELAY(10) SS_LSFT(SS_TAP(X_DOT)) SS_DELAY(10) SS_TAP(X_SPACE));
-    }
-    break;
-    case ST_MACRO_2:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_MINUS) SS_DELAY(10) SS_LSFT(SS_TAP(X_DOT)) SS_DELAY(10) SS_TAP(X_SPACE));
-    }
-    break;
-    case ST_MACRO_3:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_DOT) SS_DELAY(10) SS_TAP(X_DOT) SS_DELAY(10) SS_TAP(X_SLASH));
-    }
-    break;
-    case ST_MACRO_4:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_0)) SS_DELAY(10) SS_TAP(X_SCLN)  SS_DELAY(10) SS_TAP(X_ENTER));
-    }
-    break;
-    case ST_MACRO_5:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_QUOTE)) SS_DELAY(10) SS_LSFT(SS_TAP(X_0)) SS_DELAY(10) SS_TAP(X_SCLN)  SS_DELAY(10) SS_TAP(X_ENTER));
-    }
-    break;
-    case ST_MACRO_6:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_C) SS_DELAY(10) SS_TAP(X_D) SS_DELAY(10) SS_TAP(X_SPACE) SS_DELAY(10) SS_LSFT(SS_TAP(X_GRAVE)) SS_DELAY(10) SS_TAP(X_SLASH));
-    }
-    break;
-    case ST_MACRO_7:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_LBRC) SS_DELAY(10) SS_TAP(X_RBRC) SS_DELAY(10) SS_TAP(X_LEFT));
-    }
-    break;
-    case ST_MACRO_8:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_9)) SS_DELAY(10) SS_LSFT(SS_TAP(X_0)) SS_DELAY(10) SS_TAP(X_LEFT));
-    }
-    break;
-    case ST_MACRO_9:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_LBRC)) SS_DELAY(10) SS_LSFT(SS_TAP(X_RBRC)) SS_DELAY(10) SS_TAP(X_LEFT));
-    }
-    break;
-    case ST_MACRO_10:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_SLASH) SS_DELAY(10) SS_TAP(X_EQUAL) SS_DELAY(10) SS_TAP(X_SPACE));
-    }
-    break;
-    case ST_MACRO_11:
-    if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_C) SS_DELAY(10) SS_TAP(X_D) SS_DELAY(10) SS_TAP(X_SPACE));
-    }
-    break;
-  }
-  return true;
+    return true;
 }
 
 uint8_t layer_state_set_user(uint8_t state) {
-  uint8_t layer = biton(state);
-  ergodox_board_led_off();
-  ergodox_right_led_1_off();
-  ergodox_right_led_2_off();
-  ergodox_right_led_3_off();
-  switch (layer) {
-    case 1:
-      ergodox_right_led_1_on();
-      break;
-    case 2:
-      ergodox_right_led_2_on();
-      break;
-    case 3:
-      ergodox_right_led_3_on();
-      break;
-    case 4:
-      ergodox_right_led_1_on();
-      ergodox_right_led_2_on();
-      break;
-    case 5:
-      ergodox_right_led_1_on();
-      ergodox_right_led_3_on();
-      break;
-    case 6:
-      ergodox_right_led_2_on();
-      ergodox_right_led_3_on();
-      break;
-    case 7:
-      ergodox_right_led_1_on();
-      ergodox_right_led_2_on();
-      ergodox_right_led_3_on();
-      break;
-    default:
-      break;
-  }
-  return state;
+    uint8_t layer = biton(state);
+    ergodox_board_led_off();
+    ergodox_right_led_1_off();
+    ergodox_right_led_2_off();
+    ergodox_right_led_3_off();
+    switch (layer) {
+        case 1:
+            ergodox_right_led_1_on();
+            break;
+        case 2:
+            ergodox_right_led_2_on();
+            break;
+        case 3:
+            ergodox_right_led_3_on();
+            break;
+        case 4:
+            ergodox_right_led_1_on();
+            ergodox_right_led_2_on();
+            break;
+        case 5:
+            ergodox_right_led_1_on();
+            ergodox_right_led_3_on();
+            break;
+        case 6:
+            ergodox_right_led_2_on();
+            ergodox_right_led_3_on();
+            break;
+        case 7:
+            ergodox_right_led_1_on();
+            ergodox_right_led_2_on();
+            ergodox_right_led_3_on();
+            break;
+        default:
+            break;
+    }
+    return state;
 };
 
 // Alternate keycodes
