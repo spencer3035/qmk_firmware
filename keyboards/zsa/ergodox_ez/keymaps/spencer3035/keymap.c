@@ -1,22 +1,20 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 #define ____ KC_TRANSPARENT
+#define XXXX KC_NO
 #define GEMIN QK_STENO_GEMINI
 #define BOLT QK_STENO_BOLT
 
 enum custom_keycodes {
     RGB_SLD = EZ_SAFE_RANGE,
-    VIM_QUIT,
     FAT_ARROW,
     THIN_ARROW,
     UP_DIR,
     PAREN_END,
     Q_PAREN_END,
-    ST_MACRO_6,
-    SQUARE_KET,
+    CLOPEN_SQ,
     CLOPEN_PAREN,
     CLOPEN_CURLY,
-    DIV_EQ,
 };
 
 enum layers {
@@ -47,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE_LAYER] = LAYOUT_ergodox(
 ____,      KC_1,               KC_2,     KC_3,      KC_4,      KC_5,                   ____,
 ____,      KC_Q,               KC_W,     KC_E,      KC_R,      KC_T,                   KC_ESCAPE,
-KC_LGUI,   MT(MOD_LALT,KC_A),  KC_S,     KC_D,      KC_F,      KC_G,             /*_*/
+KC_LGUI,   MT(MOD_LALT,KC_A),  KC_S,     KC_D,      KC_F,      KC_G,                   /*_*/
 ____,      MT(MOD_LCTL,KC_Z),  KC_X,     KC_C,      KC_V,      KC_B,                   CW_TOGG,
 ____,      ____,               ____,     ____,      TO(2),     /*_*/                   /*_*/
 /*_*/      /*_*/               /*_*/     /*_*/      /*_*/      OSM(MOD_LGUI),          DM_PLY1,
@@ -72,10 +70,10 @@ KC_LALT,   ____,  QK_LOCK,  ____,  KC_ESCAPE,  /*_*/      /*_*/
 /*_*/      /*_*/  /*_*/     /*_*/  /*_*/       /*_*/      ____,
 /*_*/      /*_*/  /*_*/     /*_*/  ____,       ____,      ____,
 TO(0),     ____,  ____,     ____,  ____,       ____,      KC_EQUAL,
-KC_NO,     ____,  ____,     ____,  ____,       ____,      ____,
+XXXX,      ____,  ____,     ____,  ____,       ____,      ____,
 /*_*/      ____,  ____,     ____,  ____,       KC_SCLN,   ____,
 ____,      ____,  ____,     ____,  ____,       KC_SLASH,  KC_RSFT,
-/*_*/      /*_*/  KC_NO,    ____,  ____,       ____,      ____,
+/*_*/      /*_*/  XXXX,     ____,  ____,       ____,      ____,
 ____,      ____,  /*_*/     /*_*/  /*_*/       /*_*/      /*_*/
 ____,      /*_*/  /*_*/     /*_*/  /*_*/       /*_*/      /*_*/
 ____,      ____,  ____      /*_*/  /*_*/       /*_*/      /*_*/
@@ -135,36 +133,36 @@ ____,  /*_*/           /*_*/   /*_*/   /*_*/   /*_*/  /*_*/
 ____,  ____,           ____    /*_*/   /*_*/   /*_*/  /*_*/
   ),
   [MACROS_LAYER] = LAYOUT_ergodox(
-____,   DM_REC1,       DM_REC2,  ____,        ____,          ____,         ____,
-____,   VIM_QUIT,      KC_NO,    FAT_ARROW,   KC_NO,         KC_NO,        ____,
-____,   THIN_ARROW,    KC_NO,    UP_DIR,      PAREN_END,     Q_PAREN_END,  /*_*/
-____,   KC_NO,         KC_NO,    ST_MACRO_6,  KC_NO,         SQUARE_KET,   ____,
-____,   ____,          ____,     ____,        ____,          /*_*/         /*_*/
-/*_*/   /*_*/          /*_*/     /*_*/        /*_*/          ____,         ____,
-/*_*/   /*_*/          /*_*/     /*_*/        /*_*/          /*_*/         ____,
-/*_*/   /*_*/          /*_*/     /*_*/        ____,          ____,         ____,
-____,   ____,          ____,     ____,        ____,          ____,         ____,
-____,   ____,          KC_NO,    ____,        CLOPEN_PAREN,  KC_NO,        ____,
-/*_*/   CLOPEN_CURLY,  KC_NO,    KC_NO,       KC_NO,         KC_NO,        ____,
-____,   ____,          KC_NO,    KC_NO,       KC_NO,         DIV_EQ,       ____,
-/*_*/   /*_*/          ____,     ____,        ____,          ____,         ____,
-____,   ____,          /*_*/     /*_*/        /*_*/          /*_*/         /*_*/
-TO(0),  /*_*/          /*_*/     /*_*/        /*_*/          /*_*/         /*_*/
-____,   ____,          ____      /*_*/        /*_*/          /*_*/         /*_*/
+____,   DM_REC1,       DM_REC2,  XXXX,       XXXX,          XXXX,         ____,
+____,   XXXX,          XXXX,     FAT_ARROW,  XXXX,          XXXX,         ____,
+____,   THIN_ARROW,    XXXX,     UP_DIR,     PAREN_END,     Q_PAREN_END,  /*_*/
+____,   XXXX,          XXXX,     XXXX,       XXXX,          CLOPEN_SQ,    ____,
+____,   ____,          ____,     ____,       ____,          /*_*/         /*_*/
+/*_*/   /*_*/          /*_*/     /*_*/       /*_*/          ____,         ____,
+/*_*/   /*_*/          /*_*/     /*_*/       /*_*/          /*_*/         ____,
+/*_*/   /*_*/          /*_*/     /*_*/       ____,          ____,         ____,
+____,   XXXX,          XXXX,     XXXX,       XXXX,          XXXX,         ____,
+____,   XXXX,          XXXX,     XXXX,       CLOPEN_PAREN,  XXXX,         ____,
+/*_*/   CLOPEN_CURLY,  XXXX,     XXXX,       XXXX,          XXXX,         ____,
+____,   XXXX,          XXXX,     XXXX,       XXXX,          XXXX,         ____,
+/*_*/   /*_*/          ____,     ____,       ____,          ____,         ____,
+____,   ____,          /*_*/     /*_*/       /*_*/          /*_*/         /*_*/
+TO(0),  /*_*/          /*_*/     /*_*/       /*_*/          /*_*/         /*_*/
+____,   ____,          ____      /*_*/       /*_*/          /*_*/         /*_*/
   ),
   [STENOGRAPHY_LAYER] = LAYOUT_ergodox(
-____,     KC_NO,    STN_N2,  STN_N3,  STN_N4,  STN_N5,   BOLT,
+____,     XXXX,     STN_N2,  STN_N3,  STN_N4,  STN_N5,   BOLT,
 ____,     STN_N1,   STN_TL,  STN_PL,  STN_HL,  STN_ST1,  ____,
 ____,     STN_S1,   STN_KL,  STN_WL,  STN_RL,  STN_ST2,  /*_*/
-____,     STN_S2,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,
+____,     STN_S2,   XXXX,    XXXX,    XXXX,    XXXX,     XXXX,
 ____,     ____,     ____,    ____,    STN_NC,  /*_*/     /*_*/
 /*_*/     /*_*/     /*_*/    /*_*/    /*_*/    STN_NC,   STN_RES1,
 /*_*/     /*_*/     /*_*/    /*_*/    /*_*/    /*_*/     STN_RES2,
 /*_*/     /*_*/     /*_*/    /*_*/    STN_A,   STN_O,    ____,
-GEMIN,    STN_N6,   STN_N7,  STN_N8,  STN_N9,  KC_NO,    KC_NO,
+GEMIN,    STN_N6,   STN_N7,  STN_N8,  STN_N9,  XXXX,     XXXX,
 TO(0),    STN_ST3,  STN_FR,  STN_PR,  STN_LR,  STN_NA,   STN_NB,
 /*_*/     STN_ST4,  STN_RR,  STN_BR,  STN_GR,  STN_TR,   STN_DR,
-____,     KC_NO,    KC_NO,   KC_NO,   KC_NO,   STN_SR,   STN_ZR,
+____,     XXXX,     XXXX,    XXXX,    XXXX,    STN_SR,   STN_ZR,
 /*_*/     /*_*/     STN_NC,  ____,    ____,    ____,     ____,
 STN_FN,   STN_NC,   /*_*/    /*_*/    /*_*/    /*_*/     /*_*/
 STN_PWR,  /*_*/     /*_*/    /*_*/    /*_*/    /*_*/     /*_*/
@@ -214,59 +212,44 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case VIM_QUIT:
-            if (record->event.pressed) {
-                SEND_STRING(SS_LSFT(SS_TAP(X_SCLN)) SS_DELAY(10) SS_TAP(X_Q) SS_DELAY(10) SS_LSFT(SS_TAP(X_1)) SS_DELAY(10) SS_TAP(X_ENTER));
-            }
-            break;
         case FAT_ARROW:
             if (record->event.pressed) {
-                SEND_STRING(SS_TAP(X_EQUAL) SS_DELAY(10) SS_LSFT(SS_TAP(X_DOT)) SS_DELAY(10) SS_TAP(X_SPACE));
+                SEND_STRING("=> ");
             }
             break;
         case THIN_ARROW:
             if (record->event.pressed) {
-                SEND_STRING(SS_TAP(X_MINUS) SS_DELAY(10) SS_LSFT(SS_TAP(X_DOT)) SS_DELAY(10) SS_TAP(X_SPACE));
+                SEND_STRING("-> ");
             }
             break;
         case UP_DIR:
             if (record->event.pressed) {
-                SEND_STRING(SS_TAP(X_DOT) SS_DELAY(10) SS_TAP(X_DOT) SS_DELAY(10) SS_TAP(X_SLASH));
+                SEND_STRING("../");
             }
             break;
         case PAREN_END:
             if (record->event.pressed) {
-                SEND_STRING(SS_LSFT(SS_TAP(X_0)) SS_DELAY(10) SS_TAP(X_SCLN) SS_DELAY(10) SS_TAP(X_ENTER));
+                SEND_STRING(");\n");
             }
             break;
         case Q_PAREN_END:
             if (record->event.pressed) {
-                SEND_STRING(SS_LSFT(SS_TAP(X_QUOTE)) SS_DELAY(10) SS_LSFT(SS_TAP(X_0)) SS_DELAY(10) SS_TAP(X_SCLN) SS_DELAY(10) SS_TAP(X_ENTER));
+                SEND_STRING("\");\n");
             }
             break;
-        case ST_MACRO_6:
+        case CLOPEN_SQ:
             if (record->event.pressed) {
-                SEND_STRING(SS_TAP(X_C) SS_DELAY(10) SS_TAP(X_D) SS_DELAY(10) SS_TAP(X_SPACE) SS_DELAY(10) SS_LSFT(SS_TAP(X_GRAVE)) SS_DELAY(10) SS_TAP(X_SLASH));
-            }
-            break;
-        case SQUARE_KET:
-            if (record->event.pressed) {
-                SEND_STRING(SS_TAP(X_LBRC) SS_DELAY(10) SS_TAP(X_RBRC) SS_DELAY(10) SS_TAP(X_LEFT));
+                SEND_STRING("[]" SS_TAP(X_LEFT));
             }
             break;
         case CLOPEN_PAREN:
             if (record->event.pressed) {
-                SEND_STRING(SS_LSFT(SS_TAP(X_9)) SS_DELAY(10) SS_LSFT(SS_TAP(X_0)) SS_DELAY(10) SS_TAP(X_LEFT));
+                SEND_STRING("()" SS_TAP(X_LEFT));
             }
             break;
         case CLOPEN_CURLY:
             if (record->event.pressed) {
-                SEND_STRING(SS_LSFT(SS_TAP(X_LBRC)) SS_DELAY(10) SS_LSFT(SS_TAP(X_RBRC)) SS_DELAY(10) SS_TAP(X_LEFT));
-            }
-            break;
-        case DIV_EQ:
-            if (record->event.pressed) {
-                SEND_STRING(SS_TAP(X_SLASH) SS_DELAY(10) SS_TAP(X_EQUAL) SS_DELAY(10) SS_TAP(X_SPACE));
+                SEND_STRING("{}" SS_TAP(X_LEFT));
             }
             break;
     }
@@ -314,13 +297,18 @@ uint8_t layer_state_set_user(uint8_t state) {
 
 // Alternate keycodes
 uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
+    bool shifted = (mods & MOD_MASK_SHIFT);  // Was Shift held?
     switch (keycode) {
-        case KC_C:
-            return KC_D;
-        case KC_Q:
-            return KC_A;
-        case KC_E:
-            return KC_D;
+        case KC_D:
+            return KC_E;
+        case KC_TAB:
+            if (shifted) {
+                return KC_TAB;
+            } else {
+                return S(KC_TAB);
+            }
+        case KC_LPRN:
+            return KC_RPRN;
         default:
             return ____;
     }
