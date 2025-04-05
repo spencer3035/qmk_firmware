@@ -153,22 +153,22 @@ TO(0),  /*_*/        /*_*/          /*_*/         /*_*/         /*_*/         /*
 ____,   ____,        ____           /*_*/         /*_*/         /*_*/         /*_*/
   ),
   [STENOGRAPHY_LAYER] = LAYOUT_ergodox(
-____,     XXXX,     STN_N2,  STN_N3,  STN_N4,  STN_N5,   BOLT,
-____,     STN_N1,   STN_TL,  STN_PL,  STN_HL,  STN_ST1,  ____,
-____,     STN_S1,   STN_KL,  STN_WL,  STN_RL,  STN_ST2,  /*_*/
-____,     STN_S2,   XXXX,    XXXX,    XXXX,    XXXX,     XXXX,
-____,     ____,     ____,    ____,    STN_NC,  /*_*/     /*_*/
-/*_*/     /*_*/     /*_*/    /*_*/    /*_*/    STN_NC,   STN_RES1,
-/*_*/     /*_*/     /*_*/    /*_*/    /*_*/    /*_*/     STN_RES2,
-/*_*/     /*_*/     /*_*/    /*_*/    STN_A,   STN_O,    ____,
-GEMIN,    STN_N6,   STN_N7,  STN_N8,  STN_N9,  XXXX,     XXXX,
-TO(0),    STN_ST3,  STN_FR,  STN_PR,  STN_LR,  STN_NA,   STN_NB,
-/*_*/     STN_ST4,  STN_RR,  STN_BR,  STN_GR,  STN_TR,   STN_DR,
-____,     XXXX,     XXXX,    XXXX,    XXXX,    STN_SR,   STN_ZR,
-/*_*/     /*_*/     STN_NC,  ____,    ____,    ____,     ____,
-STN_FN,   STN_NC,   /*_*/    /*_*/    /*_*/    /*_*/     /*_*/
-STN_PWR,  /*_*/     /*_*/    /*_*/    /*_*/    /*_*/     /*_*/
-____,     STN_E,    STN_U    /*_*/    /*_*/    /*_*/     /*_*/
+____,     XXXX,     STN_N2,   STN_N3,  STN_N4,  STN_N5,   BOLT,
+____,     STN_N1,   STN_TL,   STN_PL,  STN_HL,  STN_ST1,  ____,
+____,     STN_S1,   STN_KL,   STN_WL,  STN_RL,  STN_ST2,  /*_*/
+____,     STN_S2,   XXXX,     XXXX,    XXXX,    XXXX,     XXXX,
+____,     ____,     ____,     ____,    STN_NC,  /*_*/     /*_*/
+/*_*/     /*_*/     /*_*/     /*_*/    /*_*/    STN_NC,   STN_RES1,
+/*_*/     /*_*/     /*_*/     /*_*/    /*_*/    /*_*/     STN_RES2,
+/*_*/     /*_*/     /*_*/     /*_*/    STN_A,   STN_O,    ____,
+GEMIN,    STN_N6,   STN_N7,   STN_N8,  STN_N9,  XXXX,     XXXX,
+TO(0),    STN_ST3,  STN_FR,   STN_PR,  STN_LR,  STN_NA,   STN_NB,
+/*_*/     STN_ST4,  STN_RR,   STN_BR,  STN_GR,  STN_TR,   STN_DR,
+____,     XXXX,     STN_ST4,  XXXX,    XXXX,    STN_SR,   STN_ZR,
+/*_*/     /*_*/     STN_NC,   ____,    ____,    ____,     ____,
+STN_FN,   STN_NC,   /*_*/     /*_*/    /*_*/    /*_*/     /*_*/
+STN_PWR,  /*_*/     /*_*/     /*_*/    /*_*/    /*_*/     /*_*/
+____,     STN_E,    STN_U     /*_*/    /*_*/    /*_*/     /*_*/
   ),
 };
 
