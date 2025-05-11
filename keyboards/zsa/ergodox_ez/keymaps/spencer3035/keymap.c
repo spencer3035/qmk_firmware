@@ -49,7 +49,7 @@ ____,      KC_1,     KC_2,     KC_3,      KC_4,      KC_5,           ____,
 ____,      KC_Q,     KC_W,     KC_E,      KC_R,      KC_T,           KC_ESCAPE,
 KC_LGUI,   KC_A,     KC_S,     KC_D,      KC_F,      KC_G,           /*_*/
 ____,      KC_Z,     KC_X,     KC_C,      KC_V,      KC_B,           CW_TOGG,
-____,      ____,     ____,     ____,      ____,      /*_*/           /*_*/
+____,      ____,     ____,     ____,      QK_REP,    /*_*/           /*_*/
 /*_*/      /*_*/     /*_*/     /*_*/      /*_*/      OSM(MOD_LGUI),  DM_PLY1,
 /*_*/      /*_*/     /*_*/     /*_*/      /*_*/      /*_*/           DM_RSTP,
 /*_*/      /*_*/     /*_*/     /*_*/      KC_SPACE,  OSM(MOD_LSFT),  KC_LCTL,
@@ -135,22 +135,22 @@ ____,  /*_*/           /*_*/   /*_*/   /*_*/   /*_*/  /*_*/
 ____,  ____,           ____    /*_*/   /*_*/   /*_*/  /*_*/
   ),
   [MACROS_LAYER] = LAYOUT_ergodox(
-____,   DM_REC1,     DM_REC2,       XXXX,         XXXX,         XXXX,         ____,
-____,   XXXX,        XXXX,          FAT_ARROW,    XXXX,         XXXX,         ____,
-____,   THIN_ARROW,  XXXX,          UP_DIR,       PAREN_END,    Q_PAREN_END,  /*_*/
-____,   XXXX,        XXXX,          XXXX,         XXXX,         XXXX,         ____,
-____,   ____,        ____,          ____,         ____,         /*_*/         /*_*/
-/*_*/   /*_*/        /*_*/          /*_*/         /*_*/         ____,         ____,
-/*_*/   /*_*/        /*_*/          /*_*/         /*_*/         /*_*/         ____,
-/*_*/   /*_*/        /*_*/          /*_*/         ____,         ____,         ____,
-____,   XXXX,        XXXX,          XXXX,         XXXX,         XXXX,         ____,
-____,   XXXX,        CLOPEN_CURLY,  XXXX,         XXXX,         XXXX,         ____,
-/*_*/   XXXX,        CLOPEN_PAREN,  CLOPEN_DQUO,  CLOPEN_SQUO,  XXXX,         ____,
-____,   XXXX,        CLOPEN_SQ,     XXXX,         XXXX,         XXXX,         ____,
-/*_*/   /*_*/        ____,          ____,         ____,         ____,         ____,
-____,   ____,        /*_*/          /*_*/         /*_*/         /*_*/         /*_*/
-TO(0),  /*_*/        /*_*/          /*_*/         /*_*/         /*_*/         /*_*/
-____,   ____,        ____           /*_*/         /*_*/         /*_*/         /*_*/
+____,   DM_REC1,  DM_REC2,       XXXX,         XXXX,         XXXX,         ____,
+____,   XXXX,     XXXX,          XXXX,         XXXX,         XXXX,         ____,
+____,   XXXX,     XXXX,          UP_DIR,       PAREN_END,    Q_PAREN_END,  /*_*/
+____,   XXXX,     XXXX,          XXXX,         XXXX,         XXXX,         ____,
+____,   ____,     ____,          ____,         ____,         /*_*/         /*_*/
+/*_*/   /*_*/     /*_*/          /*_*/         /*_*/         ____,         ____,
+/*_*/   /*_*/     /*_*/          /*_*/         /*_*/         /*_*/         ____,
+/*_*/   /*_*/     /*_*/          /*_*/         ____,         ____,         ____,
+____,   XXXX,     XXXX,          XXXX,         XXXX,         XXXX,         ____,
+____,   XXXX,     CLOPEN_CURLY,  XXXX,         XXXX,         XXXX,         ____,
+/*_*/   XXXX,     CLOPEN_PAREN,  CLOPEN_DQUO,  CLOPEN_SQUO,  XXXX,         ____,
+____,   XXXX,     CLOPEN_SQ,     XXXX,         XXXX,         XXXX,         ____,
+/*_*/   /*_*/     ____,          ____,         ____,         ____,         ____,
+____,   ____,     /*_*/          /*_*/         /*_*/         /*_*/         /*_*/
+TO(0),  /*_*/     /*_*/          /*_*/         /*_*/         /*_*/         /*_*/
+____,   ____,     ____           /*_*/         /*_*/         /*_*/         /*_*/
   ),
   [STENOGRAPHY_LAYER] = LAYOUT_ergodox(
 ____,     XXXX,     STN_N2,   STN_N3,  STN_N4,  STN_N5,   BOLT,
