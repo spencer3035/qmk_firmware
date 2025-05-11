@@ -81,22 +81,22 @@ ____,      /*_*/     /*_*/     /*_*/  /*_*/       /*_*/  /*_*/
 ____,      ____,     ____      /*_*/  /*_*/       /*_*/  /*_*/
   ),
   [SYMBOLS_LAYER] = LAYOUT_ergodox(
-____,  KC_KP_1,  KC_KP_2,     KC_KP_3,   KC_KP_4,   KC_KP_5,   ____,
-____,  KC_CIRC,  KC_MINUS,    KC_AMPR,   KC_LCBR,   XXXX,      ____,
-____,  KC_PIPE,  KC_PLUS,     KC_EXLM,   KC_LPRN,   KC_ASTR,   /*_*/
-____,  XXXX,     XXXX,        KC_HASH,   KC_LBRC,   XXXX,      ____,
-____,  ____,     ____,        ____,      TO(2),     /*_*/      /*_*/
-/*_*/  /*_*/     /*_*/        /*_*/      /*_*/      ____,      KC_NUM_LOCK,
-/*_*/  /*_*/     /*_*/        /*_*/      /*_*/      /*_*/      ____,
-/*_*/  /*_*/     /*_*/        /*_*/      ____,      ____,      ____,
-____,  KC_KP_6,  KC_KP_7,     KC_KP_8,   KC_KP_9,   KC_KP_0,   KC_KP_DOT,
-____,  XXXX,     KC_RCBR,     KC_GRAVE,  XXXX,      XXXX,      ____,
-/*_*/  KC_TILD,  KC_RPRN,     KC_DQUO,   KC_EQUAL,  KC_SCLN,   ____,
-____,  XXXX,     KC_RBRC,     ____,      ____,      KC_SLASH,  ____,
-/*_*/  /*_*/     TO(0),       ____,      ____,      ____,      ____,
-____,  ____,     /*_*/        /*_*/      /*_*/      /*_*/      /*_*/
-____,  /*_*/     /*_*/        /*_*/      /*_*/      /*_*/      /*_*/
-____,  ____,     KC_KP_ENTER  /*_*/      /*_*/      /*_*/      /*_*/
+____,  KC_KP_1,     KC_KP_2,    KC_KP_3,   KC_KP_4,   KC_KP_5,      ____,
+____,  KC_CIRC,     KC_MINUS,   KC_AMPR,   KC_LCBR,   XXXX,         ____,
+____,  KC_PIPE,     KC_PLUS,    KC_EXLM,   KC_LPRN,   KC_ASTR,      /*_*/
+____,  THIN_ARROW,  FAT_ARROW,  KC_HASH,   KC_LBRC,   XXXX,         ____,
+____,  ____,        ____,       ____,      TO(2),     /*_*/         /*_*/
+/*_*/  /*_*/        /*_*/       /*_*/      /*_*/      ____,         KC_NUM_LOCK,
+/*_*/  /*_*/        /*_*/       /*_*/      /*_*/      /*_*/         ____,
+/*_*/  /*_*/        /*_*/       /*_*/      ____,      ____,         ____,
+____,  KC_KP_6,     KC_KP_7,    KC_KP_8,   KC_KP_9,   KC_KP_0,      KC_KP_DOT,
+____,  XXXX,        KC_RCBR,    KC_GRAVE,  XXXX,      XXXX,         ____,
+/*_*/  KC_TILD,     KC_RPRN,    KC_DQUO,   KC_EQUAL,  KC_SCLN,      ____,
+____,  XXXX,        KC_RBRC,    ____,      ____,      KC_KP_SLASH,  ____,
+/*_*/  /*_*/        TO(0),       ____,      ____,       ____,         ____,
+____,  ____,        /*_*/        /*_*/      /*_*/       /*_*/         /*_*/
+____,  /*_*/        /*_*/        /*_*/      /*_*/       /*_*/         /*_*/
+____,  ____,        KC_KP_ENTER  /*_*/      /*_*/       /*_*/         /*_*/
   ),
   [NAVIGATION_LAYER] = LAYOUT_ergodox(
 ____,  ____,           ____,          ____,        ____,      ____,     ____,
