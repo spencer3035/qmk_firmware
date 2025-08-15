@@ -130,3 +130,7 @@ via*.json
 !/keyboards/zsa/**/keymaps/default/**
 !/keyboards/zsa/**/keymaps/oryx
 !/keyboards/zsa/**/keymaps/oryx/**
+
+# Whitelist my config files
+!/keyboards/zsa/**/keymaps/spencer3035
+!/keyboards/zsa/**/keymaps/spencer3035/**
