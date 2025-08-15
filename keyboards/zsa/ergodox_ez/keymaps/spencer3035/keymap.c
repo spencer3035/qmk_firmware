@@ -48,7 +48,7 @@ KC_GRAVE,  KC_1,     KC_2,     KC_3,      KC_4,      KC_5,           ____,
 KC_TAB,    KC_Q,     KC_W,     KC_E,      KC_R,      KC_T,           ____,
 KC_LGUI,   KC_A,     KC_S,     KC_D,      KC_F,      KC_G,           /*_*/
 KC_LSFT,   KC_Z,     KC_X,     KC_C,      KC_V,      KC_B,           CW_TOGG,
-KC_LCTL,   KC_LALT,  QK_LOCK,  QK_REP,    KC_ESC,    /*_*/           /*_*/
+KC_LCTL,   KC_LALT,  QK_LOCK,  ____,      KC_ESC,    /*_*/           /*_*/
 /*_*/      /*_*/     /*_*/     /*_*/      /*_*/      OSM(MOD_LGUI),  QK_REP,
 /*_*/      /*_*/     /*_*/     /*_*/      /*_*/      /*_*/           ____,
 /*_*/      /*_*/     /*_*/     /*_*/      KC_SPACE,  OSM(MOD_LSFT),  KC_LCTL,
