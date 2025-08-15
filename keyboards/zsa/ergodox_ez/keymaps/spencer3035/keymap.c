@@ -21,7 +21,6 @@ enum custom_keycodes {
 
 enum layers {
     BASE_LAYER,
-    GAMING_LAYER,
     SYMBOLS_LAYER,
     NAVIGATION_LAYER,
     FUNCTION_LAYER,
@@ -30,7 +29,6 @@ enum layers {
 
 #define BAL BASE_LAYER
 #define SYL SYMBOLS_LAYER
-#define GAL GAMING_LAYER
 #define NAL NAVIGATION_LAYER
 #define FNL FUNCTION_LAYER
 #define STL STENOGRAPHY_LAYER
@@ -59,7 +57,7 @@ KC_LCTL,   KC_LALT,  QK_LOCK,   ____,      KC_ESC,    /*_*/           /*_*/
 /*_*/      /*_*/     /*_*/      /*_*/      /*_*/      OSM(MOD_LGUI),  QK_REP,
 /*_*/      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/           ____,
 /*_*/      /*_*/     /*_*/      /*_*/      KC_SPACE,  OSM(MOD_LSFT),  KC_LCTL,
-TO(GAL),   KC_6,     KC_7,      KC_8,      KC_9,      KC_0,           KC_DOT,
+____,      KC_6,     KC_7,      KC_8,      KC_9,      KC_0,           KC_DOT,
 TO(STL),   KC_Y,     KC_U,      KC_I,      KC_O,      KC_P,           KC_BSLS,
 /*_*/      KC_H,     KC_J,      KC_K,      KC_L,      KC_SCLN,        KC_QUOTE,
 KC_MINUS,  KC_N,     KC_M,      KC_COMMA,  KC_DOT,    KC_SLASH,       KC_COLN,
@@ -67,24 +65,6 @@ KC_MINUS,  KC_N,     KC_M,      KC_COMMA,  KC_DOT,    KC_SLASH,       KC_COLN,
 QK_REP,    KC_TAB,   /*_*/      /*_*/      /*_*/      /*_*/           /*_*/
 ____,      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/           /*_*/
 KC_LALT,   KC_BSPC,  KC_ENTER   /*_*/      /*_*/      /*_*/           /*_*/
-  ),
-  [GAMING_LAYER] = LAYOUT_ergodox(
-____,     ____,  ____,      ____,  ____,  ____,  ____,
-____,     ____,  ____,      ____,  ____,  ____,  ____,
-____,     ____,  ____,      ____,  ____,  ____,  /*_*/
-____,     ____,  ____,      ____,  ____,  ____,  ____,
-____,     ____,  ____,      ____,  ____,  /*_*/  /*_*/
-/*_*/     /*_*/  /*_*/      /*_*/  /*_*/  ____,  ____,
-/*_*/     /*_*/  /*_*/      /*_*/  /*_*/  /*_*/  ____,
-/*_*/     /*_*/  /*_*/      /*_*/  ____,  ____,  ____,
-TO(BAL),  ____,  ____,      ____,  ____,  ____,  KC_EQUAL,
-XXXX,     ____,  ____,      ____,  ____,  ____,  ____,
-/*_*/     ____,  ____,      ____,  ____,  ____,  ____,
-____,     ____,  ____,      ____,  ____,  ____,  KC_RSFT,
-/*_*/     /*_*/  OSL(SYL),  ____,  ____,  ____,  ____,
-____,     ____,  /*_*/      /*_*/  /*_*/  /*_*/  /*_*/
-____,     /*_*/  /*_*/      /*_*/  /*_*/  /*_*/  /*_*/
-____,     ____,  ____       /*_*/  /*_*/  /*_*/  /*_*/
   ),
   [SYMBOLS_LAYER] = LAYOUT_ergodox(
 ____,  KC_KP_1,     KC_KP_2,      KC_KP_3,   KC_KP_4,   KC_KP_5,      ____,
