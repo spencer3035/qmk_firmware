@@ -49,7 +49,7 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE_LAYER] = LAYOUT_ergodox(
-KC_GRAVE,  KC_1,     KC_2,      KC_3,      KC_4,      KC_5,           ____,
+KC_GRAVE,  KC_1,     KC_2,      KC_3,      KC_4,      KC_5,           TO(FNL),
 KC_TAB,    KC_Q,     KC_W,      KC_E,      KC_R,      KC_T,           ____,
 KC_LGUI,   KC_A,     KC_S,      KC_D,      KC_F,      KC_G,           /*_*/
 KC_LSFT,   KC_Z,     KC_X,      KC_C,      KC_V,      KC_B,           CW_TOGG,
@@ -85,40 +85,22 @@ ____,  /*_*/        /*_*/         /*_*/      /*_*/      /*_*/         /*_*/
 ____,  ____,        KC_KP_ENTER   /*_*/      /*_*/      /*_*/         /*_*/
   ),
   [NAVIGATION_LAYER] = LAYOUT_ergodox(
-____,  ____,           ____,          ____,        ____,      ____,     ____,
-____,  LCTL(KC_LALT),  ____,          ____,        ____,      ____,     ____,
-____,  KC_LALT,        ____,          KC_DELETE,   ____,      ____,     /*_*/
-____,  KC_LCTL,        ____,          ____,        ____,      ____,     ____,
-____,  ____,           ____,          ____,        ____,      /*_*/     /*_*/
-/*_*/  /*_*/           /*_*/          /*_*/        /*_*/      ____,     ____,
-/*_*/  /*_*/           /*_*/          /*_*/        /*_*/      /*_*/     ____,
-/*_*/  /*_*/           /*_*/          /*_*/        ____,      ____,     ____,
-____,  ____,           ____,          ____,        ____,      ____,     ____,
-____,  ____,           ____,          KC_INSERT,   ____,      ____,     ____,
-/*_*/  KC_LEFT,        KC_DOWN,       KC_UP,       KC_RIGHT,  KC_RALT,  ____,
-____,  KC_HOME,        KC_PGDN,       KC_PAGE_UP,  KC_END,    KC_RCTL,  ____,
-/*_*/  /*_*/           LALT(KC_TAB),  ____,        ____,      ____,     ____,
-____,  ____,           /*_*/          /*_*/        /*_*/      /*_*/     /*_*/
-____,  /*_*/           /*_*/          /*_*/        /*_*/      /*_*/     /*_*/
-____,  ____,           ____           /*_*/        /*_*/      /*_*/     /*_*/
-  ),
-  [FUNCTION_LAYER] = LAYOUT_ergodox(
-____,  ____,           ____,   ____,   ____,   ____,  ____,
-____,  LCTL(KC_LALT),  ____,   ____,   ____,   ____,  ____,
-____,  KC_LALT,        ____,   ____,   ____,   ____,  /*_*/
-____,  KC_LCTL,        ____,   ____,   ____,   ____,  ____,
-____,  ____,           ____,   ____,   ____,   /*_*/  /*_*/
-/*_*/  /*_*/           /*_*/   /*_*/   /*_*/   ____,  ____,
-/*_*/  /*_*/           /*_*/   /*_*/   /*_*/   /*_*/  ____,
-/*_*/  /*_*/           /*_*/   /*_*/   ____,   ____,  ____,
-____,  ____,           ____,   ____,   ____,   ____,  ____,
-____,  KC_F12,         KC_F7,  KC_F8,  KC_F9,  ____,  ____,
-/*_*/  KC_F11,         KC_F4,  KC_F5,  KC_F6,  ____,  ____,
-____,  KC_F10,         KC_F1,  KC_F2,  KC_F3,  ____,  ____,
-/*_*/  /*_*/           ____,   ____,   ____,   ____,  ____,
-____,  ____,           /*_*/   /*_*/   /*_*/   /*_*/  /*_*/
-____,  /*_*/           /*_*/   /*_*/   /*_*/   /*_*/  /*_*/
-____,  ____,           ____    /*_*/   /*_*/   /*_*/  /*_*/
+____,  KC_F1,    KC_F2,    KC_F3,       KC_F4,     KC_F5,   KC_F12,
+____,  ____,     ____,     ____,        ____,      ____,    ____,
+____,  ____,     ____,     KC_DELETE,   ____,      ____,    /*_*/
+____,  ____,     ____,     ____,        ____,      ____,    ____,
+____,  ____,     ____,     ____,        ____,      /*_*/    /*_*/
+/*_*/  /*_*/     /*_*/     /*_*/        /*_*/      ____,    ____,
+/*_*/  /*_*/     /*_*/     /*_*/        /*_*/      /*_*/    ____,
+/*_*/  /*_*/     /*_*/     /*_*/        ____,      ____,    ____,
+____,  KC_F6,    KC_F7,    KC_F8,       KC_F9,     KC_F10,  KC_F11,
+____,  ____,     ____,     KC_INSERT,   ____,      ____,    ____,
+/*_*/  KC_LEFT,  KC_DOWN,  KC_UP,       KC_RIGHT,  ____,    ____,
+____,  KC_HOME,  KC_PGDN,  KC_PAGE_UP,  KC_END,    ____,    ____,
+/*_*/  /*_*/     ____,     ____,        ____,      ____,    ____,
+____,  ____,     /*_*/     /*_*/        /*_*/      /*_*/    /*_*/
+____,  /*_*/     /*_*/     /*_*/        /*_*/      /*_*/    /*_*/
+____,  ____,     ____      /*_*/        /*_*/      /*_*/    /*_*/
   ),
   [STENOGRAPHY_LAYER] = LAYOUT_ergodox(
 ____,     XXXX,     STN_N2,   STN_N3,  STN_N4,  STN_N5,   BOLT,
@@ -142,17 +124,14 @@ ____,     STN_E,    STN_U     /*_*/    /*_*/    /*_*/     /*_*/
 
 enum combo_events {
     TO_NAV,
-    TO_FN,
     CHANGE_DIR,
 };
 
 const uint16_t PROGMEM to_nav[] = { KC_R, KC_F, COMBO_END};
-const uint16_t PROGMEM to_fn[] = { KC_T, KC_G, COMBO_END};
 const uint16_t PROGMEM change_dir[] = { KC_D, KC_C, COMBO_END};
 
 combo_t key_combos[] = {
     [TO_NAV] = COMBO_ACTION(to_nav),
-    [TO_FN] = COMBO_ACTION(to_fn),
     [CHANGE_DIR] = COMBO_ACTION(change_dir),
 };
 
@@ -161,13 +140,6 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         case TO_NAV:
             if (pressed) {
                 set_oneshot_layer(NAVIGATION_LAYER, ONESHOT_START);
-            } else {
-                clear_oneshot_layer_state(ONESHOT_PRESSED);
-            }
-            break;
-        case TO_FN:
-            if (pressed) {
-                set_oneshot_layer(FUNCTION_LAYER, ONESHOT_START);
             } else {
                 clear_oneshot_layer_state(ONESHOT_PRESSED);
             }
