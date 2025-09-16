@@ -23,14 +23,12 @@ enum layers {
     BASE_LAYER,
     SYMBOLS_LAYER,
     NAVIGATION_LAYER,
-    FUNCTION_LAYER,
     STENOGRAPHY_LAYER,
 };
 
 #define BAL BASE_LAYER
 #define SYL SYMBOLS_LAYER
 #define NAL NAVIGATION_LAYER
-#define FNL FUNCTION_LAYER
 #define STL STENOGRAPHY_LAYER
 
 /* Setup:
@@ -49,7 +47,7 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE_LAYER] = LAYOUT_ergodox(
-KC_GRAVE,  KC_1,     KC_2,      KC_3,      KC_4,      KC_5,           TO(FNL),
+KC_GRAVE,  KC_1,     KC_2,      KC_3,      KC_4,      KC_5,           ____,
 KC_TAB,    KC_Q,     KC_W,      KC_E,      KC_R,      KC_T,           ____,
 KC_LGUI,   KC_A,     KC_S,      KC_D,      KC_F,      KC_G,           /*_*/
 KC_LSFT,   KC_Z,     KC_X,      KC_C,      KC_V,      KC_B,           CW_TOGG,
