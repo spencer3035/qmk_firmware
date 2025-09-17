@@ -9,14 +9,6 @@ enum custom_keycodes {
     RGB_SLD = EZ_SAFE_RANGE,
     FAT_ARROW,
     THIN_ARROW,
-    UP_DIR,
-    PAREN_END,
-    Q_PAREN_END,
-    CLOPEN_SQ,
-    CLOPEN_PAREN,
-    CLOPEN_CURLY,
-    CLOPEN_SQUO,
-    CLOPEN_DQUO,
 };
 
 enum layers {
@@ -67,7 +59,7 @@ KC_LALT,   KC_BSPC,  KC_ENTER   /*_*/      /*_*/      /*_*/           /*_*/
   [SYMBOLS_LAYER] = LAYOUT_ergodox(
 ____,  KC_KP_1,     KC_KP_2,      KC_KP_3,      KC_KP_4,    KC_KP_5,      KC_NUM_LOCK,
 ____,  KC_CIRC,     KC_KP_MINUS,  KC_AMPR,      KC_LCBR,    XXXX,         ____,
-____,  KC_PIPE,     KC_KP_PLUS,   KC_EXLM,      KC_LPRN,    KC_KP_ASTR,   /*_*/
+____,  KC_PIPE,     KC_KP_PLUS,   KC_EXLM,      KC_LPRN,    KC_PAST,      /*_*/
 ____,  THIN_ARROW,  FAT_ARROW,    KC_HASH,      KC_LBRC,    XXXX,         ____,
 ____,  ____,        ____,         ____,         ____,       /*_*/         /*_*/
 /*_*/  /*_*/        /*_*/         /*_*/         /*_*/       ____,         ____,
@@ -161,46 +153,6 @@ bool process_macro_user(uint16_t keycode, keyrecord_t *record) {
         case THIN_ARROW:
             if (record->event.pressed) {
                 SEND_STRING("-> ");
-            }
-            break;
-        case UP_DIR:
-            if (record->event.pressed) {
-                SEND_STRING("../");
-            }
-            break;
-        case PAREN_END:
-            if (record->event.pressed) {
-                SEND_STRING(");\n");
-            }
-            break;
-        case Q_PAREN_END:
-            if (record->event.pressed) {
-                SEND_STRING("\");\n");
-            }
-            break;
-        case CLOPEN_SQ:
-            if (record->event.pressed) {
-                SEND_STRING("[]" SS_TAP(X_LEFT));
-            }
-            break;
-        case CLOPEN_PAREN:
-            if (record->event.pressed) {
-                SEND_STRING("()" SS_TAP(X_LEFT));
-            }
-            break;
-        case CLOPEN_CURLY:
-            if (record->event.pressed) {
-                SEND_STRING("{}" SS_TAP(X_LEFT));
-            }
-            break;
-        case CLOPEN_SQUO:
-            if (record->event.pressed) {
-                SEND_STRING("''" SS_TAP(X_LEFT));
-            }
-            break;
-        case CLOPEN_DQUO:
-            if (record->event.pressed) {
-                SEND_STRING("\"\"" SS_TAP(X_LEFT));
             }
             break;
     }
