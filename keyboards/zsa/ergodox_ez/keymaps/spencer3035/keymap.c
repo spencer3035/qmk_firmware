@@ -15,6 +15,7 @@ enum layers {
     BASE_LAYER,
     SYMBOLS_LAYER,
     NAVIGATION_LAYER,
+    COLEMAK_LAYER,
     STENOGRAPHY_LAYER,
 };
 
@@ -22,6 +23,7 @@ enum layers {
 #define SYL SYMBOLS_LAYER
 #define NAL NAVIGATION_LAYER
 #define STL STENOGRAPHY_LAYER
+#define CMK COLEMAK_LAYER
 
 /* Setup:
  * 0) Setup registers, put in register q, modifies register q, w, and e. Use q to format one layer
@@ -47,7 +49,7 @@ KC_LCTL,   KC_LALT,  QK_LOCK,   ____,      KC_ESC,    /*_*/           /*_*/
 /*_*/      /*_*/     /*_*/      /*_*/      /*_*/      OSM(MOD_LGUI),  QK_REP,
 /*_*/      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/           ____,
 /*_*/      /*_*/     /*_*/      /*_*/      KC_SPACE,  OSM(MOD_LSFT),  KC_LCTL,
-____,      KC_6,     KC_7,      KC_8,      KC_9,      KC_0,           KC_DOT,
+TO(CMK),   KC_6,     KC_7,      KC_8,      KC_9,      KC_0,           KC_DOT,
 TO(STL),   KC_Y,     KC_U,      KC_I,      KC_O,      KC_P,           KC_BSLS,
 /*_*/      KC_H,     KC_J,      KC_K,      KC_L,      KC_SCLN,        KC_QUOTE,
 KC_MINUS,  KC_N,     KC_M,      KC_COMMA,  KC_DOT,    KC_SLASH,       KC_COLN,
@@ -91,6 +93,24 @@ ____,  KC_HOME,  KC_PGDN,  KC_PAGE_UP,  KC_END,    ____,    ____,
 ____,  ____,     /*_*/     /*_*/        /*_*/      /*_*/    /*_*/
 ____,  /*_*/     /*_*/     /*_*/        /*_*/      /*_*/    /*_*/
 ____,  ____,     ____      /*_*/        /*_*/      /*_*/    /*_*/
+  ),
+  [COLEMAK_LAYER] = LAYOUT_ergodox(
+KC_GRAVE,  KC_1,     KC_2,      KC_3,      KC_4,      KC_5,           ____,
+KC_TAB,    KC_Q,     KC_W,      KC_F,      KC_P,      KC_G,           ____,
+KC_LGUI,   KC_A,     KC_R,      KC_S,      KC_T,      KC_D,           /*_*/
+KC_LSFT,   KC_Z,     KC_X,      KC_C,      KC_V,      KC_B,           CW_TOGG,
+KC_LCTL,   KC_LALT,  QK_LOCK,   ____,      KC_ESC,    /*_*/           /*_*/
+/*_*/      /*_*/     /*_*/      /*_*/      /*_*/      OSM(MOD_LGUI),  QK_REP,
+/*_*/      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/           ____,
+/*_*/      /*_*/     /*_*/      /*_*/      KC_SPACE,  OSM(MOD_LSFT),  KC_LCTL,
+____,      KC_6,     KC_7,      KC_8,      KC_9,      KC_0,           KC_DOT,
+TO(BAL),   KC_J,     KC_L,      KC_U,      KC_Y,      KC_SCLN,        KC_BSLS,
+/*_*/      KC_H,     KC_N,      KC_E,      KC_I,      KC_O,           KC_QUOTE,
+KC_MINUS,  KC_K,     KC_M,      KC_COMMA,  KC_DOT,    KC_SLASH,       KC_COLN,
+/*_*/      /*_*/     OSL(SYL),  KC_LEFT,   KC_DOWN,   KC_UP,          KC_RIGHT,
+QK_REP,    KC_TAB,   /*_*/      /*_*/      /*_*/      /*_*/           /*_*/
+____,      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/           /*_*/
+KC_LALT,   KC_BSPC,  KC_ENTER   /*_*/      /*_*/      /*_*/           /*_*/
   ),
   [STENOGRAPHY_LAYER] = LAYOUT_ergodox(
 ____,     XXXX,     STN_N2,   STN_N3,  STN_N4,  STN_N5,   BOLT,
