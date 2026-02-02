@@ -103,7 +103,7 @@ KC_LCTL,   KC_LALT,  QK_LOCK,   ____,      KC_ESC,    /*_*/           /*_*/
 /*_*/      /*_*/     /*_*/      /*_*/      /*_*/      OSM(MOD_LGUI),  QK_REP,
 /*_*/      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/           ____,
 /*_*/      /*_*/     /*_*/      /*_*/      KC_SPACE,  OSM(MOD_LSFT),  KC_LCTL,
-____,      KC_6,     KC_7,      KC_8,      KC_9,      KC_0,           KC_DOT,
+TO(BAL),   KC_6,     KC_7,      KC_8,      KC_9,      KC_0,           KC_DOT,
 TO(BAL),   KC_J,     KC_L,      KC_U,      KC_Y,      KC_SCLN,        KC_BSLS,
 /*_*/      KC_H,     KC_N,      KC_E,      KC_I,      KC_O,           KC_QUOTE,
 KC_MINUS,  KC_K,     KC_M,      KC_COMMA,  KC_DOT,    KC_SLASH,       KC_COLN,
