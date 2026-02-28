@@ -95,22 +95,22 @@ ____,  /*_*/     /*_*/     /*_*/        /*_*/      /*_*/    /*_*/
 ____,  ____,     ____      /*_*/        /*_*/      /*_*/    /*_*/
   ),
   [ALT_LAYOUT_LAYER] = LAYOUT_ergodox(
-KC_GRAVE,  KC_1,     KC_2,      KC_3,      KC_4,      KC_5,           ____,
-KC_TAB,    KC_B,     KC_L,      KC_D,      KC_C,      KC_Z,           ____,
-KC_LGUI,   KC_N,     KC_R,      KC_T,      KC_S,      KC_G,           /*_*/
-KC_LSFT,   KC_Q,     KC_X,      KC_M,      KC_W,      KC_V,           CW_TOGG,
-KC_LCTL,   KC_LALT,  QK_LOCK,   ____,      KC_ESC,    /*_*/           /*_*/
-/*_*/      /*_*/     /*_*/      /*_*/      /*_*/      OSM(MOD_LGUI),  QK_REP,
-/*_*/      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/           ____,
-/*_*/      /*_*/     /*_*/      /*_*/      KC_SPACE,  OSM(MOD_LSFT),  KC_LCTL,
-TO(BAL),   KC_6,     KC_7,      KC_8,      KC_9,      KC_0,           KC_DOT,
-TO(BAL),   KC_MINUS, KC_F,      KC_O,      KC_U,      KC_J,           KC_BSLS,
-/*_*/      KC_Y,     KC_H,      KC_A,      KC_E,      KC_I,           KC_SCLN,
-____,     KC_K,     KC_P,      KC_COMMA,  KC_DOT,    KC_SLASH,       KC_COLN,
-/*_*/      /*_*/     OSL(SYL),  KC_LEFT,   KC_DOWN,   KC_UP,          KC_RIGHT,
-QK_REP,    KC_TAB,   /*_*/      /*_*/      /*_*/      /*_*/           /*_*/
-____,      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/           /*_*/
-KC_LALT,   KC_BSPC,  KC_ENTER   /*_*/      /*_*/      /*_*/           /*_*/
+KC_GRAVE,  KC_1,      KC_2,               KC_3,               KC_4,               KC_5,           ____,
+KC_TAB,    KC_B,      KC_L,               KC_D,               KC_C,               KC_Z,           ____,
+KC_LGUI,   KC_N,      MT(MOD_LALT,KC_R),  MT(MOD_LGUI,KC_T),  MT(MOD_LCTL,KC_S),  KC_G,           /*_*/
+KC_LSFT,   KC_Q,      KC_X,               KC_M,               KC_W,               KC_V,           CW_TOGG,
+XXXX,      XXXX,      QK_LOCK,            XXXX,               KC_ESC,             /*_*/           /*_*/
+/*_*/      /*_*/      /*_*/               /*_*/               /*_*/               OSM(MOD_LGUI),  QK_REP,
+/*_*/      /*_*/      /*_*/               /*_*/               /*_*/               /*_*/           ____,
+/*_*/      /*_*/      /*_*/               /*_*/               KC_SPACE,           OSM(MOD_LSFT),  XXXX,
+TO(BAL),   KC_6,      KC_7,               KC_8,               KC_9,               KC_0,           KC_DOT,
+TO(BAL),   KC_MINUS,  KC_F,               KC_O,               KC_U,               KC_J,           KC_BSLS,
+/*_*/      KC_Y,      MT(MOD_RCTL,KC_H),  MT(MOD_RGUI,KC_A),  MT(MOD_RALT,KC_E),  KC_I,           KC_SCLN,
+XXXX,      KC_K,      KC_P,               KC_COMMA,           KC_DOT,             KC_SLASH,       KC_COLN,
+/*_*/      /*_*/      OSL(SYL),           KC_LEFT,            KC_DOWN,            KC_UP,          KC_RIGHT,
+QK_REP,    KC_TAB,    /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
+XXXX,      /*_*/      /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
+XXXX,      KC_BSPC,   KC_ENTER            /*_*/               /*_*/               /*_*/           /*_*/
   ),
   [STENOGRAPHY_LAYER] = LAYOUT_ergodox(
 ____,     XXXX,     STN_N2,   STN_N3,  STN_N4,  STN_N5,   BOLT,
