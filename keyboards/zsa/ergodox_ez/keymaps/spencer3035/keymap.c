@@ -100,7 +100,7 @@ KC_TAB,    KC_B,      KC_L,               KC_D,               KC_C,             
 KC_LGUI,   KC_N,      MT(MOD_LALT,KC_R),  MT(MOD_LGUI,KC_T),  MT(MOD_LCTL,KC_S),  KC_G,           /*_*/
 KC_LSFT,   KC_Q,      KC_X,               KC_M,               KC_W,               KC_V,           CW_TOGG,
 XXXX,      XXXX,      QK_LOCK,            XXXX,               KC_ESC,             /*_*/           /*_*/
-/*_*/      /*_*/      /*_*/               /*_*/               /*_*/               OSM(MOD_LGUI),  QK_REP,
+/*_*/      /*_*/      /*_*/               /*_*/               /*_*/               XXXX,           QK_REP,
 /*_*/      /*_*/      /*_*/               /*_*/               /*_*/               /*_*/           ____,
 /*_*/      /*_*/      /*_*/               /*_*/               KC_SPACE,           OSM(MOD_LSFT),  XXXX,
 TO(BAL),   KC_6,      KC_7,               KC_8,               KC_9,               KC_0,           KC_DOT,
