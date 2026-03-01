@@ -60,23 +60,23 @@ QK_REP,    KC_TAB,   /*_*/               /*_*/               /*_*/              
 ____,      /*_*/     /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
 TO(NAL),   KC_BSPC,  KC_ENTER            /*_*/               /*_*/               /*_*/           /*_*/
   ),
-  [SYMBOLS_LAYER] = LAYOUT_ergodox(
-____,     KC_KP_1,     KC_KP_2,      KC_KP_3,      KC_KP_4,    KC_KP_5,      KC_NUM_LOCK,
-____,     KC_CIRC,     KC_KP_MINUS,  KC_AMPR,      KC_LCBR,    XXXX,         ____,
-____,     KC_PIPE,     KC_KP_PLUS,   KC_EXLM,      KC_LPRN,    KC_PAST,      /*_*/
-____,     THIN_ARROW,  FAT_ARROW,    KC_HASH,      KC_LBRC,    XXXX,         ____,
-____,     ____,        ____,         ____,         ____,       /*_*/         /*_*/
-/*_*/     /*_*/        /*_*/         /*_*/         /*_*/       ____,         ____,
-/*_*/     /*_*/        /*_*/         /*_*/         /*_*/       /*_*/         ____,
-/*_*/     /*_*/        /*_*/         /*_*/         ____,       ____,         ____,
-____,     KC_KP_6,     KC_KP_7,      KC_KP_8,      KC_KP_9,    KC_KP_0,      KC_KP_DOT,
-____,     XXXX,        KC_RCBR,      KC_GRAVE,     XXXX,       XXXX,         ____,
-/*_*/     KC_TILD,     KC_RPRN,      KC_DQUO,      KC_EQUAL,   KC_SCLN,      ____,
-____,     XXXX,        KC_RBRC,      KC_KP_COMMA,  KC_KP_DOT,  KC_KP_SLASH,  ____,
-/*_*/     /*_*/        TO(BAL),      ____,         ____,       ____,         ____,
-____,     ____,        /*_*/         /*_*/         /*_*/       /*_*/         /*_*/
-____,     /*_*/        /*_*/         /*_*/         /*_*/       /*_*/         /*_*/
-TO(BAL),  ____,        KC_KP_ENTER   /*_*/         /*_*/       /*_*/         /*_*/
+  [ALT_LAYOUT_LAYER] = LAYOUT_ergodox(
+KC_GRAVE,  KC_1,      KC_2,               KC_3,               KC_4,               KC_5,           ____,
+KC_TAB,    KC_B,      KC_L,               KC_D,               KC_C,               KC_Z,           ____,
+KC_LGUI,   KC_N,      MT(MOD_LALT,KC_R),  MT(MOD_LGUI,KC_T),  MT(MOD_LCTL,KC_S),  LT(NAL,KC_G),   /*_*/
+KC_LSFT,   KC_Q,      KC_X,               KC_M,               KC_W,               KC_V,           CW_TOGG,
+XXXX,      XXXX,      QK_LOCK,            XXXX,               KC_ESC,             /*_*/           /*_*/
+/*_*/      /*_*/      /*_*/               /*_*/               /*_*/               XXXX,           QK_REP,
+/*_*/      /*_*/      /*_*/               /*_*/               /*_*/               /*_*/           ____,
+/*_*/      /*_*/      /*_*/               /*_*/               KC_SPACE,           OSM(MOD_LSFT),  XXXX,
+____,      KC_6,      KC_7,               KC_8,               KC_9,               KC_0,           KC_DOT,
+____,      KC_MINUS,  KC_F,               KC_O,               KC_U,               KC_J,           KC_BSLS,
+/*_*/      KC_Y,      MT(MOD_RCTL,KC_H),  MT(MOD_RGUI,KC_A),  MT(MOD_RALT,KC_E),  KC_I,           KC_SCLN,
+XXXX,      KC_K,      KC_P,               KC_COMMA,           KC_DOT,             KC_SLASH,       KC_QUOTE,
+/*_*/      /*_*/      OSL(SYL),           KC_LEFT,            KC_DOWN,            KC_UP,          KC_RIGHT,
+QK_REP,    KC_TAB,    /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
+XXXX,      /*_*/      /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
+TO(BAL),   KC_BSPC,   KC_ENTER            /*_*/               /*_*/               /*_*/           /*_*/
   ),
   [NAVIGATION_LAYER] = LAYOUT_ergodox(
 ____,     KC_F1,    KC_F2,    KC_F3,       KC_F4,     KC_F5,   KC_F12,
@@ -96,23 +96,23 @@ ____,     ____,     /*_*/     /*_*/        /*_*/      /*_*/    /*_*/
 ____,     /*_*/     /*_*/     /*_*/        /*_*/      /*_*/    /*_*/
 TO(BAL),  ____,     ____      /*_*/        /*_*/      /*_*/    /*_*/
   ),
-  [ALT_LAYOUT_LAYER] = LAYOUT_ergodox(
-KC_GRAVE,  KC_1,      KC_2,               KC_3,               KC_4,               KC_5,           ____,
-KC_TAB,    KC_B,      KC_L,               KC_D,               KC_C,               KC_Z,           ____,
-KC_LGUI,   KC_N,      MT(MOD_LALT,KC_R),  MT(MOD_LGUI,KC_T),  MT(MOD_LCTL,KC_S),  KC_G,           /*_*/
-KC_LSFT,   KC_Q,      KC_X,               KC_M,               KC_W,               KC_V,           CW_TOGG,
-XXXX,      XXXX,      QK_LOCK,            XXXX,               KC_ESC,             /*_*/           /*_*/
-/*_*/      /*_*/      /*_*/               /*_*/               /*_*/               XXXX,           QK_REP,
-/*_*/      /*_*/      /*_*/               /*_*/               /*_*/               /*_*/           ____,
-/*_*/      /*_*/      /*_*/               /*_*/               KC_SPACE,           OSM(MOD_LSFT),  XXXX,
-____,      KC_6,      KC_7,               KC_8,               KC_9,               KC_0,           KC_DOT,
-____,      KC_MINUS,  KC_F,               KC_O,               KC_U,               KC_J,           KC_BSLS,
-/*_*/      KC_Y,      MT(MOD_RCTL,KC_H),  MT(MOD_RGUI,KC_A),  MT(MOD_RALT,KC_E),  KC_I,           KC_SCLN,
-XXXX,      KC_K,      KC_P,               KC_COMMA,           KC_DOT,             KC_SLASH,       KC_QUOTE,
-/*_*/      /*_*/      OSL(SYL),           KC_LEFT,            KC_DOWN,            KC_UP,          KC_RIGHT,
-QK_REP,    KC_TAB,    /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
-XXXX,      /*_*/      /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
-TO(BAL),   KC_BSPC,   KC_ENTER            /*_*/               /*_*/               /*_*/           /*_*/
+  [SYMBOLS_LAYER] = LAYOUT_ergodox(
+____,     KC_KP_1,     KC_KP_2,      KC_KP_3,      KC_KP_4,    KC_KP_5,      KC_NUM_LOCK,
+____,     KC_CIRC,     KC_KP_MINUS,  KC_AMPR,      KC_LCBR,    XXXX,         ____,
+____,     KC_PIPE,     KC_KP_PLUS,   KC_EXLM,      KC_LPRN,    KC_PAST,      /*_*/
+____,     THIN_ARROW,  FAT_ARROW,    KC_HASH,      KC_LBRC,    XXXX,         ____,
+____,     ____,        ____,         ____,         ____,       /*_*/         /*_*/
+/*_*/     /*_*/        /*_*/         /*_*/         /*_*/       ____,         ____,
+/*_*/     /*_*/        /*_*/         /*_*/         /*_*/       /*_*/         ____,
+/*_*/     /*_*/        /*_*/         /*_*/         ____,       ____,         ____,
+____,     KC_KP_6,     KC_KP_7,      KC_KP_8,      KC_KP_9,    KC_KP_0,      KC_KP_DOT,
+____,     XXXX,        KC_RCBR,      KC_GRAVE,     XXXX,       XXXX,         ____,
+/*_*/     KC_TILD,     KC_RPRN,      KC_DQUO,      KC_EQUAL,   KC_SCLN,      ____,
+____,     XXXX,        KC_RBRC,      KC_KP_COMMA,  KC_KP_DOT,  KC_KP_SLASH,  ____,
+/*_*/     /*_*/        TO(BAL),      ____,         ____,       ____,         ____,
+____,     ____,        /*_*/         /*_*/         /*_*/       /*_*/         /*_*/
+____,     /*_*/        /*_*/         /*_*/         /*_*/       /*_*/         /*_*/
+TO(BAL),  ____,        KC_KP_ENTER   /*_*/         /*_*/       /*_*/         /*_*/
   ),
   [STENOGRAPHY_LAYER] = LAYOUT_ergodox(
 ____,     XXXX,     STN_N2,   STN_N3,  STN_N4,  STN_N5,   BOLT,
@@ -153,27 +153,17 @@ TO(BAL),   KC_BSPC,  KC_ENTER   /*_*/      /*_*/      /*_*/           /*_*/
 };
 
 enum combo_events {
-    TO_NAV,
     CHANGE_DIR,
 };
 
-const uint16_t PROGMEM to_nav[] = { KC_R, KC_F, COMBO_END};
 const uint16_t PROGMEM change_dir[] = { KC_D, KC_C, COMBO_END};
 
 combo_t key_combos[] = {
-    [TO_NAV] = COMBO_ACTION(to_nav),
     [CHANGE_DIR] = COMBO_ACTION(change_dir),
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
     switch (combo_index) {
-        case TO_NAV:
-            if (pressed) {
-                set_oneshot_layer(NAVIGATION_LAYER, ONESHOT_START);
-            } else {
-                clear_oneshot_layer_state(ONESHOT_PRESSED);
-            }
-            break;
         case CHANGE_DIR:
             if (pressed) {
                 SEND_STRING("cd ");
