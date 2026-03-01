@@ -18,6 +18,7 @@ enum layers {
     ALT_LAYOUT_LAYER,
     STENOGRAPHY_LAYER,
     GAMING_LAYER,
+    GAMING_ALT_LAYER,
 };
 
 #define BAL BASE_LAYER
@@ -26,6 +27,7 @@ enum layers {
 #define STL STENOGRAPHY_LAYER
 #define ALT ALT_LAYOUT_LAYER
 #define GML GAMING_LAYER
+#define G2L GAMING_ALT_LAYER
 
 /* Setup:
  * 0) Setup registers, put in register q, modifies register q, w, and e. Use q to format one layer
@@ -76,12 +78,66 @@ XXXX,      KC_K,      KC_P,               KC_COMMA,           KC_DOT,           
 /*_*/      /*_*/      OSL(SYL),           KC_LEFT,            KC_DOWN,            KC_UP,          KC_RIGHT,
 QK_REP,    KC_TAB,    /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
 XXXX,      /*_*/      /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
-TO(BAL),   KC_BSPC,   KC_ENTER            /*_*/               /*_*/               /*_*/           /*_*/
+TO(NAL),   KC_BSPC,   KC_ENTER            /*_*/               /*_*/               /*_*/           /*_*/
+  ),
+  [GAMING_LAYER] = LAYOUT_ergodox(
+KC_GRAVE,  KC_1,     KC_2,      KC_3,      KC_4,      KC_5,      XXXX,
+KC_TAB,    KC_Q,     KC_W,      KC_E,      KC_R,      KC_T,      XXXX,
+XXXX,      KC_A,     KC_S,      KC_D,      KC_F,      KC_G,      /*_*/
+KC_LSFT,   KC_Z,     KC_X,      KC_C,      KC_V,      KC_B,      XXXX,
+KC_LCTL,   KC_LALT,  QK_LOCK,   XXXX,      KC_ESC,    /*_*/      /*_*/
+/*_*/      /*_*/     /*_*/      /*_*/      /*_*/      OSL(G2L),  QK_REP,
+/*_*/      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/      XXXX,
+/*_*/      /*_*/     /*_*/      /*_*/      KC_SPACE,  KC_LSFT,   KC_LCTL,
+____,      KC_6,     KC_7,      KC_8,      KC_9,      KC_0,      KC_DOT,
+TO(STL),   KC_Y,     KC_U,      KC_I,      KC_O,      KC_P,      KC_BSLS,
+/*_*/      KC_H,     KC_J,      KC_K,      KC_L,      KC_SCLN,   KC_QUOTE,
+KC_MINUS,  KC_N,     KC_M,      KC_COMMA,  KC_DOT,    KC_SLASH,  KC_COLN,
+/*_*/      /*_*/     OSL(SYL),  KC_LEFT,   KC_DOWN,   KC_UP,     KC_RIGHT,
+QK_REP,    KC_TAB,   /*_*/      /*_*/      /*_*/      /*_*/      /*_*/
+XXXX,      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/      /*_*/
+TO(BAL),   KC_BSPC,  KC_ENTER   /*_*/      /*_*/      /*_*/      /*_*/
+  ),
+  [GAMING_ALT_LAYER] = LAYOUT_ergodox(
+XXXX,     KC_6,     KC_7,     KC_8,      KC_9,      KC_0,      XXXX,
+XXXX,     KC_Y,     KC_U,     KC_I,      KC_O,      KC_P,      XXXX,
+XXXX,     KC_H,     KC_J,     KC_K,      KC_L,      KC_SCLN,   /*_*/
+XXXX,     KC_N,     KC_M,     KC_COMMA,  KC_DOT,    KC_SLASH,  XXXX,
+XXXX,     XXXX,     XXXX,     XXXX,      KC_ESC,    /*_*/      /*_*/
+/*_*/     /*_*/     /*_*/     /*_*/      /*_*/      TO(GML),   QK_REP,
+/*_*/     /*_*/     /*_*/     /*_*/      /*_*/      /*_*/      XXXX,
+/*_*/     /*_*/     /*_*/     /*_*/      KC_SPACE,  KC_LSFT,   KC_LCTL,
+____,     ____,     ____,     ____,      ____,      ____,      ____,
+____,     ____,     ____,     ____,      ____,      ____,      ____,
+/*_*/     ____,     ____,     ____,      ____,      ____,      ____,
+____,     ____,     ____,     ____,      ____,      ____,      ____,
+/*_*/     /*_*/     XXXX,     KC_LEFT,   KC_DOWN,   KC_UP,     KC_RIGHT,
+QK_REP,   KC_TAB,   /*_*/     /*_*/      /*_*/      /*_*/      /*_*/
+XXXX,     /*_*/     /*_*/     /*_*/      /*_*/      /*_*/      /*_*/
+TO(BAL),  KC_BSPC,  KC_ENTER  /*_*/      /*_*/      /*_*/      /*_*/
+  ),
+  [SYMBOLS_LAYER] = LAYOUT_ergodox(
+XXXX,     KC_KP_1,     KC_KP_2,      KC_KP_3,      KC_KP_4,    KC_KP_5,      KC_NUM_LOCK,
+XXXX,     KC_CIRC,     KC_KP_MINUS,  KC_AMPR,      KC_LCBR,    XXXX,         XXXX,
+XXXX,     KC_PIPE,     KC_KP_PLUS,   KC_EXLM,      KC_LPRN,    KC_PAST,      /*_*/
+XXXX,     THIN_ARROW,  FAT_ARROW,    KC_HASH,      KC_LBRC,    XXXX,         XXXX,
+XXXX,     XXXX,        XXXX,         XXXX,         XXXX,       /*_*/         /*_*/
+/*_*/     /*_*/        /*_*/         /*_*/         /*_*/       XXXX,         XXXX,
+/*_*/     /*_*/        /*_*/         /*_*/         /*_*/       /*_*/         XXXX,
+/*_*/     /*_*/        /*_*/         /*_*/         XXXX,       XXXX,         XXXX,
+XXXX,     KC_KP_6,     KC_KP_7,      KC_KP_8,      KC_KP_9,    KC_KP_0,      KC_KP_DOT,
+XXXX,     XXXX,        KC_RCBR,      KC_GRAVE,     XXXX,       XXXX,         XXXX,
+/*_*/     KC_TILD,     KC_RPRN,      KC_DQUO,      KC_EQUAL,   KC_SCLN,      XXXX,
+XXXX,     XXXX,        KC_RBRC,      KC_KP_COMMA,  KC_KP_DOT,  KC_KP_SLASH,  XXXX,
+/*_*/     /*_*/        TO(BAL),      XXXX,         XXXX,       XXXX,         XXXX,
+XXXX,     XXXX,        /*_*/         /*_*/         /*_*/       /*_*/         /*_*/
+XXXX,     /*_*/        /*_*/         /*_*/         /*_*/       /*_*/         /*_*/
+TO(BAL),  XXXX,        KC_KP_ENTER   /*_*/         /*_*/       /*_*/         /*_*/
   ),
   [NAVIGATION_LAYER] = LAYOUT_ergodox(
 ____,     KC_F1,    KC_F2,    KC_F3,       KC_F4,     KC_F5,   KC_F12,
-____,     TO(ALT),  TO(STL),  TO(GML),     ____,      ____,    ____,
-____,     ____,     ____,     ____,        ____,      ____,    /*_*/
+____,     TO(BAL),  TO(ALT),  TO(STL),     DF(GML),   ____,    ____,
+____,     ____,     KC_LALT,  KC_LGUI,     KC_LCTL,   ____,    /*_*/
 ____,     ____,     ____,     ____,        ____,      ____,    ____,
 ____,     ____,     ____,     ____,        ____,      /*_*/    /*_*/
 /*_*/     /*_*/     /*_*/     /*_*/        /*_*/      ____,    ____,
@@ -95,24 +151,6 @@ ____,     KC_HOME,  KC_PGDN,  KC_PAGE_UP,  KC_END,    ____,    ____,
 ____,     ____,     /*_*/     /*_*/        /*_*/      /*_*/    /*_*/
 ____,     /*_*/     /*_*/     /*_*/        /*_*/      /*_*/    /*_*/
 TO(BAL),  ____,     ____      /*_*/        /*_*/      /*_*/    /*_*/
-  ),
-  [SYMBOLS_LAYER] = LAYOUT_ergodox(
-____,     KC_KP_1,     KC_KP_2,      KC_KP_3,      KC_KP_4,    KC_KP_5,      KC_NUM_LOCK,
-____,     KC_CIRC,     KC_KP_MINUS,  KC_AMPR,      KC_LCBR,    XXXX,         ____,
-____,     KC_PIPE,     KC_KP_PLUS,   KC_EXLM,      KC_LPRN,    KC_PAST,      /*_*/
-____,     THIN_ARROW,  FAT_ARROW,    KC_HASH,      KC_LBRC,    XXXX,         ____,
-____,     ____,        ____,         ____,         ____,       /*_*/         /*_*/
-/*_*/     /*_*/        /*_*/         /*_*/         /*_*/       ____,         ____,
-/*_*/     /*_*/        /*_*/         /*_*/         /*_*/       /*_*/         ____,
-/*_*/     /*_*/        /*_*/         /*_*/         ____,       ____,         ____,
-____,     KC_KP_6,     KC_KP_7,      KC_KP_8,      KC_KP_9,    KC_KP_0,      KC_KP_DOT,
-____,     XXXX,        KC_RCBR,      KC_GRAVE,     XXXX,       XXXX,         ____,
-/*_*/     KC_TILD,     KC_RPRN,      KC_DQUO,      KC_EQUAL,   KC_SCLN,      ____,
-____,     XXXX,        KC_RBRC,      KC_KP_COMMA,  KC_KP_DOT,  KC_KP_SLASH,  ____,
-/*_*/     /*_*/        TO(BAL),      ____,         ____,       ____,         ____,
-____,     ____,        /*_*/         /*_*/         /*_*/       /*_*/         /*_*/
-____,     /*_*/        /*_*/         /*_*/         /*_*/       /*_*/         /*_*/
-TO(BAL),  ____,        KC_KP_ENTER   /*_*/         /*_*/       /*_*/         /*_*/
   ),
   [STENOGRAPHY_LAYER] = LAYOUT_ergodox(
 ____,     XXXX,     STN_N2,   STN_N3,  STN_N4,  STN_N5,   BOLT,
@@ -131,24 +169,6 @@ ____,     XXXX,     STN_ST4,  XXXX,    XXXX,    STN_SR,   STN_ZR,
 STN_FN,   STN_NC,   /*_*/     /*_*/    /*_*/    /*_*/     /*_*/
 STN_PWR,  /*_*/     /*_*/     /*_*/    /*_*/    /*_*/     /*_*/
 TO(BAL),  STN_E,    STN_U     /*_*/    /*_*/    /*_*/     /*_*/
-  ),
-  [GAMING_LAYER] = LAYOUT_ergodox(
-KC_GRAVE,  KC_1,     KC_2,      KC_3,      KC_4,      KC_5,           ____,
-KC_TAB,    KC_Q,     KC_W,      KC_E,      KC_R,      KC_T,           ____,
-KC_LGUI,   KC_A,     KC_S,      KC_D,      KC_F,      KC_G,           /*_*/
-KC_LSFT,   KC_Z,     KC_X,      KC_C,      KC_V,      KC_B,           CW_TOGG,
-KC_LCTL,   KC_LALT,  QK_LOCK,   ____,      KC_ESC,    /*_*/           /*_*/
-/*_*/      /*_*/     /*_*/      /*_*/      /*_*/      OSM(MOD_LGUI),  QK_REP,
-/*_*/      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/           ____,
-/*_*/      /*_*/     /*_*/      /*_*/      KC_SPACE,  KC_LSFT,        ____,
-TO(ALT),   KC_6,     KC_7,      KC_8,      KC_9,      KC_0,           KC_DOT,
-TO(STL),   KC_Y,     KC_U,      KC_I,      KC_O,      KC_P,           KC_BSLS,
-/*_*/      KC_H,     KC_J,      KC_K,      KC_L,      KC_SCLN,        KC_QUOTE,
-KC_MINUS,  KC_N,     KC_M,      KC_COMMA,  KC_DOT,    KC_SLASH,       KC_COLN,
-/*_*/      /*_*/     OSL(SYL),  KC_LEFT,   KC_DOWN,   KC_UP,          KC_RIGHT,
-QK_REP,    KC_TAB,   /*_*/      /*_*/      /*_*/      /*_*/           /*_*/
-____,      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/           /*_*/
-TO(BAL),   KC_BSPC,  KC_ENTER   /*_*/      /*_*/      /*_*/           /*_*/
   ),
 };
 
