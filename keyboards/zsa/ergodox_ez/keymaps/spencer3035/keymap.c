@@ -136,7 +136,7 @@ TO(BAL),  XXXX,        KC_KP_ENTER   /*_*/         /*_*/       /*_*/         /*_
   ),
   [NAVIGATION_LAYER] = LAYOUT_ergodox(
 ____,     KC_F1,    KC_F2,    KC_F3,       KC_F4,     KC_F5,   KC_F12,
-____,     TO(BAL),  TO(ALT),  TO(STL),     DF(GML),   ____,    ____,
+____,     TO(BAL),  TO(ALT),  TO(STL),     TO(GML),   ____,    ____,
 ____,     ____,     KC_LALT,  KC_LGUI,     KC_LCTL,   ____,    /*_*/
 ____,     ____,     ____,     ____,        ____,      ____,    ____,
 ____,     ____,     ____,     ____,        ____,      /*_*/    /*_*/
