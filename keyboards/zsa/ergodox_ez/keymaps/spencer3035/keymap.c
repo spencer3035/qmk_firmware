@@ -86,9 +86,9 @@ KC_TAB,    KC_Q,     KC_W,      KC_E,      KC_R,      KC_T,      XXXX,
 XXXX,      KC_A,     KC_S,      KC_D,      KC_F,      KC_G,      /*_*/
 KC_LSFT,   KC_Z,     KC_X,      KC_C,      KC_V,      KC_B,      XXXX,
 KC_LCTL,   KC_LALT,  QK_LOCK,   XXXX,      KC_ESC,    /*_*/      /*_*/
-/*_*/      /*_*/     /*_*/      /*_*/      /*_*/      OSL(G2L),  QK_REP,
+/*_*/      /*_*/     /*_*/      /*_*/      /*_*/      KC_LCTL,   QK_REP,
 /*_*/      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/      XXXX,
-/*_*/      /*_*/     /*_*/      /*_*/      KC_SPACE,  KC_LSFT,   KC_LCTL,
+/*_*/      /*_*/     /*_*/      /*_*/      KC_SPACE,  KC_LSFT,   OSL(G2L),
 ____,      KC_6,     KC_7,      KC_8,      KC_9,      KC_0,      KC_DOT,
 TO(STL),   KC_Y,     KC_U,      KC_I,      KC_O,      KC_P,      KC_BSLS,
 /*_*/      KC_H,     KC_J,      KC_K,      KC_L,      KC_SCLN,   KC_QUOTE,
