@@ -96,7 +96,7 @@ KC_MINUS,  KC_N,     KC_M,      KC_COMMA,  KC_DOT,    KC_SLASH,  KC_COLN,
 /*_*/      /*_*/     OSL(SYL),  KC_LEFT,   KC_DOWN,   KC_UP,     KC_RIGHT,
 QK_REP,    KC_TAB,   /*_*/      /*_*/      /*_*/      /*_*/      /*_*/
 XXXX,      /*_*/     /*_*/      /*_*/      /*_*/      /*_*/      /*_*/
-TO(BAL),   KC_BSPC,  KC_ENTER   /*_*/      /*_*/      /*_*/      /*_*/
+TO(NAL),   KC_BSPC,  KC_ENTER   /*_*/      /*_*/      /*_*/      /*_*/
   ),
   [GAMING_ALT_LAYER] = LAYOUT_ergodox(
 XXXX,     KC_6,     KC_7,     KC_8,      KC_9,      KC_0,      XXXX,
