@@ -45,24 +45,6 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE_LAYER] = LAYOUT_ergodox(
-KC_GRAVE,  KC_1,     KC_2,               KC_3,               KC_4,               KC_5,           ____,
-KC_TAB,    KC_Q,     KC_W,               KC_E,               KC_R,               KC_T,           ____,
-KC_LGUI,   KC_A,     MT(MOD_LALT,KC_S),  MT(MOD_LGUI,KC_D),  MT(MOD_LCTL,KC_F),  LT(NAL,KC_G),   /*_*/
-KC_LSFT,   KC_Z,     KC_X,               KC_C,               KC_V,               KC_B,           CW_TOGG,
-____,      ____,     ____,               ____,               KC_ESC,             /*_*/           /*_*/
-/*_*/      /*_*/     /*_*/               /*_*/               /*_*/               ____,           QK_REP,
-/*_*/      /*_*/     /*_*/               /*_*/               /*_*/               /*_*/           ____,
-/*_*/      /*_*/     /*_*/               /*_*/               KC_SPACE,           OSM(MOD_LSFT),  ____,
-____,      KC_6,     KC_7,               KC_8,               KC_9,               KC_0,           KC_DOT,
-____,      KC_Y,     KC_U,               KC_I,               KC_O,               KC_P,           KC_BSLS,
-/*_*/      KC_H,     MT(MOD_RCTL,KC_J),  MT(MOD_RGUI,KC_K),  MT(MOD_RALT,KC_L),  KC_SCLN,        KC_QUOTE,
-KC_MINUS,  KC_N,     KC_M,               KC_COMMA,           KC_DOT,             KC_SLASH,       KC_COLN,
-/*_*/      /*_*/     OSL(SYL),           KC_LEFT,            KC_DOWN,            KC_UP,          KC_RIGHT,
-QK_REP,    KC_TAB,   /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
-____,      /*_*/     /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
-TO(NAL),   KC_BSPC,  KC_ENTER            /*_*/               /*_*/               /*_*/           /*_*/
-  ),
-  [ALT_LAYOUT_LAYER] = LAYOUT_ergodox(
 KC_GRAVE,  KC_1,      KC_2,               KC_3,               KC_4,               KC_5,           ____,
 KC_TAB,    KC_B,      KC_L,               KC_D,               KC_C,               KC_Z,           ____,
 KC_LGUI,   KC_N,      MT(MOD_LALT,KC_R),  MT(MOD_LGUI,KC_T),  MT(MOD_LCTL,KC_S),  LT(NAL,KC_G),   /*_*/
@@ -79,6 +61,24 @@ XXXX,      KC_K,      KC_P,               KC_COMMA,           KC_DOT,           
 QK_REP,    KC_TAB,    /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
 XXXX,      /*_*/      /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
 TO(NAL),   KC_BSPC,   KC_ENTER            /*_*/               /*_*/               /*_*/           /*_*/
+  ),
+  [ALT_LAYOUT_LAYER] = LAYOUT_ergodox(
+KC_GRAVE,  KC_1,     KC_2,               KC_3,               KC_4,               KC_5,           ____,
+KC_TAB,    KC_Q,     KC_W,               KC_E,               KC_R,               KC_T,           ____,
+KC_LGUI,   KC_A,     MT(MOD_LALT,KC_S),  MT(MOD_LGUI,KC_D),  MT(MOD_LCTL,KC_F),  LT(NAL,KC_G),   /*_*/
+KC_LSFT,   KC_Z,     KC_X,               KC_C,               KC_V,               KC_B,           CW_TOGG,
+____,      ____,     ____,               ____,               KC_ESC,             /*_*/           /*_*/
+/*_*/      /*_*/     /*_*/               /*_*/               /*_*/               ____,           QK_REP,
+/*_*/      /*_*/     /*_*/               /*_*/               /*_*/               /*_*/           ____,
+/*_*/      /*_*/     /*_*/               /*_*/               KC_SPACE,           OSM(MOD_LSFT),  ____,
+____,      KC_6,     KC_7,               KC_8,               KC_9,               KC_0,           KC_DOT,
+____,      KC_Y,     KC_U,               KC_I,               KC_O,               KC_P,           KC_BSLS,
+/*_*/      KC_H,     MT(MOD_RCTL,KC_J),  MT(MOD_RGUI,KC_K),  MT(MOD_RALT,KC_L),  KC_SCLN,        KC_QUOTE,
+KC_MINUS,  KC_N,     KC_M,               KC_COMMA,           KC_DOT,             KC_SLASH,       KC_COLN,
+/*_*/      /*_*/     OSL(SYL),           KC_LEFT,            KC_DOWN,            KC_UP,          KC_RIGHT,
+QK_REP,    KC_TAB,   /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
+____,      /*_*/     /*_*/               /*_*/               /*_*/               /*_*/           /*_*/
+TO(NAL),   KC_BSPC,  KC_ENTER            /*_*/               /*_*/               /*_*/           /*_*/
   ),
   [GAMING_LAYER] = LAYOUT_ergodox(
 KC_GRAVE,  KC_1,     KC_2,      KC_3,      KC_4,      KC_5,      XXXX,
