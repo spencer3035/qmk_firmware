@@ -7,6 +7,6 @@
 #define TAPPING_TERM 300
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "jmMna/x9dnXo"
+#define SERIAL_NUMBER "xBWpx/qm6375"
 #define LAYER_STATE_8BIT
 #define PERMISSIVE_HOLD
