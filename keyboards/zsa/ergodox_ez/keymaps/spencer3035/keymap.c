@@ -1,13 +1,13 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
+
 #define ____ KC_TRANSPARENT
 #define XXXX KC_NO
 #define GEMIN QK_STENO_GEMINI
 #define BOLT QK_STENO_BOLT
 
 enum custom_keycodes {
-    RGB_SLD = EZ_SAFE_RANGE,
-    FAT_ARROW,
+    FAT_ARROW = QK_USER,
     THIN_ARROW,
 };
 
