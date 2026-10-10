@@ -7,7 +7,8 @@
 #define BOLT QK_STENO_BOLT
 
 enum custom_keycodes {
-    FAT_ARROW = QK_USER,
+    RGB_SLD = QK_USER,
+    FAT_ARROW,
     THIN_ARROW,
 };
 
